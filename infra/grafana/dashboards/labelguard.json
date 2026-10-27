@@ -1,0 +1,539 @@
+{
+  "uid": "pirate-hunter-labelguard",
+  "title": "Pirate Hunter | LabelGuard Operations",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "5s",
+  "time": {
+    "from": "now-30m",
+    "to": "now"
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "timeseries",
+      "title": "Run latency p50 / p95",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.50, sum(rate(labelguard_run_seconds_bucket[5m])) by (le))",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        },
+        {
+          "expr": "histogram_quantile(0.95, sum(rate(labelguard_run_seconds_bucket[5m])) by (le))",
+          "refId": "B",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Completed throughput by agent",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "sum(rate(labelguard_runs_total[5m])) by (agent)",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ops"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "timeseries",
+      "title": "Worker error rate",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 8,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "sum(rate(labelguard_errors_total[5m])) by (service)",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ops"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "type": "timeseries",
+      "title": "Service availability",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 8,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "up",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "type": "timeseries",
+      "title": "Per-agent step latency p95",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 16,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, sum(rate(labelguard_step_seconds_bucket[5m])) by (le,agent,step))",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "type": "timeseries",
+      "title": "Provider retries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 16,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "sum(rate(labelguard_provider_retries_total[5m])) by (agent)",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ops"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "type": "timeseries",
+      "title": "Per-process memory (one application process per container)",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 24,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "process_resident_memory_bytes",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "type": "timeseries",
+      "title": "Per-process CPU seconds/second",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 24,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "rate(process_cpu_seconds_total[5m])",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "type": "timeseries",
+      "title": "Tool calls per agent",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 32,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "sum(rate(labelguard_tool_calls_total[5m])) by (agent,tool)",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ops"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "type": "timeseries",
+      "title": "Provider circuit breaker",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 32,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "labelguard_provider_circuit_open",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "type": "timeseries",
+      "title": "Cache hits / misses",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 40,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "sum(rate(labelguard_cache_total[5m])) by (outcome)",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ops"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "type": "timeseries",
+      "title": "Provider cost by agent",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 40,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "sum(increase(labelguard_cost_total[1h])) by (agent)",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "currencyUSD"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 13,
+      "type": "timeseries",
+      "title": "Container process uptime",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 48,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "labelguard_uptime_seconds",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 14,
+      "type": "timeseries",
+      "title": "Corpus age",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 48,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "time() - labelguard_corpus_built_timestamp_seconds",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 15,
+      "type": "timeseries",
+      "title": "Corpus chunks and build throughput",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 56,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "labelguard_corpus_chunks",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        },
+        {
+          "expr": "labelguard_corpus_chunks_per_second",
+          "refId": "B",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 16,
+      "type": "timeseries",
+      "title": "Token usage",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "labelguard-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 56,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "sum(rate(labelguard_tokens_total[5m])) by (agent,type)",
+          "refId": "A",
+          "legendFormat": "{{job}} {{instance}} {{agent}} {{step}} {{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ops"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    }
+  ],
+  "tags": [
+    "agentops",
+    "labelguard"
+  ]
+}

@@ -1,0 +1,14 @@
+.venv
+.git
+runtime
+tmp
+output
+data/index
+data/raw/*.txt
+data/raw/claims_iv.pdf
+__pycache__
+.pytest_cache
+.ruff_cache
+*.egg-info
+.env
+MiniProject_10_Food_Label_Compliance.pdf

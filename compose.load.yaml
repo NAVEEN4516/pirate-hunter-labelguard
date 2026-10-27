@@ -1,0 +1,25 @@
+services:
+  api:
+    environment:
+      LG_CACHE_ENABLED: ${LG_CACHE_ENABLED:-false}
+      LG_RATE_LIMIT_PER_MINUTE: "100000"
+  agent-worker:
+    environment:
+      LG_CACHE_ENABLED: ${LG_CACHE_ENABLED:-false}
+      LG_RATE_LIMIT_PER_MINUTE: "100000"
+  verifier-worker:
+    environment:
+      LG_CACHE_ENABLED: ${LG_CACHE_ENABLED:-false}
+      LG_RATE_LIMIT_PER_MINUTE: "100000"
+  loadtest:
+    image: pirate-hunter-labelguard:local
+    profiles: ["load"]
+    init: true
+    user: "10001:10001"
+    environment:
+      LOAD_API_URL: http://api:8000
+      LOAD_USERS: ${LOAD_USERS:-4}
+    command: ["locust", "-f", "loadtests/locustfile.py", "--headless", "--host", "http://api:8000", "--users", "${LOAD_USERS:-4}", "--spawn-rate", "${LOAD_USERS:-4}", "--run-time", "${LOAD_DURATION:-30s}", "--stop-timeout", "50", "--csv", "/app/output/locust", "--csv-full-history"]
+    volumes: ["./output/load/current:/app/output"]
+    depends_on:
+      api: {condition: service_healthy}

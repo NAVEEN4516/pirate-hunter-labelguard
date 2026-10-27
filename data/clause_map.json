@@ -1,0 +1,21 @@
+[
+  {"id":"LD-4","source":"labelling","clause":"4(3), 4(5), 4(7)","pages":[4],"start":"(3) Pre-packaged","end":"","topics":["general","language","scope"]},
+  {"id":"LD-5.1","source":"labelling","clause":"5(1)","pages":[5],"start":"(1) The Name of Food","end":"(2) List of Ingredients","topics":["mandatory","food_name"],"links":["AC-5.3"]},
+  {"id":"LD-5.2","source":"labelling","clause":"5(2)(a)-(b)","pages":[5],"start":"(2) List of Ingredients","end":"(c) A food additive","topics":["mandatory","ingredients"]},
+  {"id":"LD-5.3","source":"labelling","clause":"5(3)(b)","pages":[10,11],"start":"(b) Nutritional Information","end":"(c) The following foods","topics":["mandatory","nutrition","protein"],"links":["AC-5.3","AC-PROTEIN","AC-RDA"]},
+  {"id":"LD-5.4","source":"labelling","clause":"5(4)(a)-(b)","pages":[13,14],"start":"(4) Declaration regarding Veg","end":"(c) Size of the Vegetarian","topics":["mandatory","veg_mark"]},
+  {"id":"LD-5.6","source":"labelling","clause":"5(6)","pages":[15],"start":"(6) Declaration of name","end":"(7) FSSAI","topics":["mandatory","brand_owner"]},
+  {"id":"LD-5.7","source":"labelling","clause":"5(7)(a)-(c)","pages":[15,16],"start":"(7) FSSAI","end":"(d) Every food business","topics":["mandatory","licence"]},
+  {"id":"LD-5.8","source":"labelling","clause":"5(8)","pages":[16],"start":"(8) Net quantity","end":"(9) Lot/Code","topics":["mandatory","net_quantity"],"links":["EXTERNAL-LEGAL-METROLOGY"]},
+  {"id":"LD-5.9","source":"labelling","clause":"5(9)","pages":[16],"start":"(9) Lot/Code","end":"(10) Date","topics":["mandatory","batch"]},
+  {"id":"LD-5.10","source":"labelling","clause":"5(10)(a)","pages":[16],"start":"(10) Date Marking","end":"(b) The manner","topics":["mandatory","dates"]},
+  {"id":"LD-5.14","source":"labelling","clause":"5(14)","pages":[18,19],"start":"(14) Declaration regarding Food allergen","end":"(15) Every package","topics":["mandatory","allergens"]},
+  {"id":"LD-8","source":"labelling","clause":"8(1)-(3)","pages":[21,22],"start":"8. Exemptions","end":"(4) In case of prepared","topics":["exemptions","small_pack"]},
+  {"id":"AC-5.3","source":"claims","clause":"5(3)","pages":[4],"start":"[(3) When a nutrient content","end":"(4) Where a nutrient comparative","topics":["claims","bridge"],"links":["AC-PROTEIN","AC-SUGARS","AC-FIBRE","AC-RDA"]},
+  {"id":"AC-RDA","source":"claims","clause":"2(1)(n)","pages":[2],"start":"(n)","end":"(o)","topics":["claims","rda","protein"]},
+  {"id":"AC-PROTEIN","source":"claims","clause":"Schedule I, item 11 (Protein)","pages":[9],"start":"11. Protein","end":"12. Vitamin","topics":["claims","protein"]},
+  {"id":"AC-SUGARS","source":"claims","clause":"Schedule I, item 10 (Sugars)","pages":[9],"start":"10. Sugars","end":"11. Protein","topics":["claims","sugars"]},
+  {"id":"AC-FIBRE","source":"claims","clause":"Schedule I, item 14 (Dietary fibre)","pages":[9],"start":"14. Dietary fibre","end":"15. Probiotics","topics":["claims","fibre"]},
+  {"id":"AC-10","source":"claims","clause":"10(1)-(2)","pages":[6],"start":"10. Prohibited claims","end":"(3) No product","topics":["claims","disease","unsupported"]},
+  {"id":"AC-4.6","source":"claims","clause":"4(6)","pages":[3],"start":"(6) The claim","end":"(7) Where","topics":["claims","substantiation"]}
+]

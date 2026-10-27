@@ -1,0 +1,14 @@
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+runtime/
+tmp/
+data/index/
+*.sqlite*
+output/load/raw/
+output/load/current/
+*.log
+dist/

@@ -1,0 +1,85 @@
+{
+  "contract_version": "1.0",
+  "product_name": "Pirate Hunter Oat & Rice Breakfast Cereal",
+  "category": "breakfast_cereal",
+  "front_of_pack": "Oat & Rice Breakfast Cereal - source of protein",
+  "other_label_text": "Store in a cool dry place. Close the pouch after opening.",
+  "claims": [
+    "source of protein"
+  ],
+  "package": {
+    "net_quantity_g": 400,
+    "surface_area_cm2": 600,
+    "retail": true,
+    "imported": false,
+    "single_ingredient_unprocessed": false,
+    "exemption_claimed": false
+  },
+  "declarations": {
+    "food_name": "Oat & Rice Breakfast Cereal",
+    "ingredients": [
+      {
+        "name": "Rolled oats",
+        "percent": 65
+      },
+      {
+        "name": "Rice flakes",
+        "percent": 20
+      },
+      {
+        "name": "Roasted soy",
+        "percent": 10
+      },
+      {
+        "name": "Sugar",
+        "percent": 3
+      },
+      {
+        "name": "Vegetable oil",
+        "percent": 2
+      }
+    ],
+    "allergens": [
+      "Oats",
+      "Soy"
+    ],
+    "veg_mark": "veg",
+    "animal_fat_present": false,
+    "fssai_logo": true,
+    "licence_number": "10020030040050",
+    "brand_owner_name": "Pirate Hunter Foods (fictional demo)",
+    "brand_owner_address": "Example manufacturing address, Bengaluru, Karnataka, India",
+    "manufacturer_same_as_owner": true,
+    "batch_number": "DEMO-2026-01",
+    "manufacture_date": "2026-10-01",
+    "expiry_date": "2027-04-01",
+    "net_quantity_declared": true,
+    "mrp_declared": true,
+    "consumer_care_declared": true,
+    "instructions_for_use": "Ready to eat. Store in a cool dry place.",
+    "language": "en"
+  },
+  "nutrition": {
+    "basis": "per_100g",
+    "energy_kcal": 376,
+    "protein_g": 3,
+    "carbohydrate_g": 70,
+    "total_sugars_g": 4,
+    "added_sugars_g": 3,
+    "total_fat_g": 8,
+    "saturated_fat_g": 1,
+    "trans_fat_g": 0,
+    "fibre_g": 5,
+    "sodium_mg": 90,
+    "serving_size_g": 40,
+    "servings_per_pack": 10,
+    "rda_percent_declared": true
+  },
+  "rda_basis": {
+    "protein_g_per_day": 54,
+    "reference": "Illustrative benchmark supplied for arithmetic demonstration; the reviewer must replace this with the applicable current ICMR reference.",
+    "target_population": "Illustrative general adult reference",
+    "confirmed_by_reviewer": true
+  },
+  "assessment_date": "2026-10-27"
+}

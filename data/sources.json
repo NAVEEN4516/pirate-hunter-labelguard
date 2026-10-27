@@ -1,0 +1,23 @@
+{
+  "labelling": {
+    "url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf",
+    "title": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+    "version": "VIII, 2025-09-09",
+    "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+    "file": "data/raw/labelling.pdf"
+  },
+  "claims": {
+    "url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf",
+    "title": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+    "version": "IV, 2022-12-14",
+    "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+    "file": "data/raw/claims.pdf"
+  },
+  "amendment_2026": {
+    "url": "https://www.fssai.gov.in/docs/food-law/regulations/amendments/labelling-display/Notification%20dt%2024_03_2026_NRC.pdf",
+    "title": "Food Safety and Standards (Labelling and Display) First Amendment Regulations, 2026",
+    "version": "2026-03-24; commencement 2027-07-01",
+    "sha256": "34ea9ddef5a8c25c0bc6cf7353d042c80285f549962815210019880eaa68dcc9",
+    "file": "data/raw/amendment_2026.pdf"
+  }
+}

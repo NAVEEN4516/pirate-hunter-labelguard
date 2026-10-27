@@ -1,0 +1,138 @@
+name: pirate-hunter-labelguard
+x-app: &app
+  image: pirate-hunter-labelguard:local
+  build: .
+  restart: unless-stopped
+  init: true
+  env_file:
+    - path: .env
+      required: false
+  environment: &environment
+    LG_DATA_DIR: /app/runtime
+    LG_CORPUS_DIR: /app/data
+    LG_PROMPT_DIR: /app/prompts
+    LG_PROVIDER_MODE: ${LG_PROVIDER_MODE:-stub}
+    LG_PROVIDER_URL: ${LG_PROVIDER_URL:-http://provider-stub:8010}
+    LG_PROVIDER_MODEL: ${LG_PROVIDER_MODEL:-}
+    LG_PROVIDER_API_KEY: ${LG_PROVIDER_API_KEY:-}
+    LG_OTEL_ENDPOINT: ${LG_OTEL_ENDPOINT:-http://jaeger:4318/v1/traces}
+    LG_CACHE_ENABLED: ${LG_CACHE_ENABLED:-true}
+    LG_ENABLE_FAULTS: ${LG_ENABLE_FAULTS:-false}
+    LG_PROMPT_VERSION: ${LG_PROMPT_VERSION:-v2}
+    OMP_NUM_THREADS: "1"
+    OPENBLAS_NUM_THREADS: "1"
+    LANGSMITH_TRACING: "false"
+  volumes:
+    - state:/app/runtime
+    - index:/app/data/index
+  stop_grace_period: 55s
+
+services:
+  init:
+    <<: *app
+    restart: "no"
+    command: ["python", "scripts/init_service.py"]
+  api:
+    <<: *app
+    ports: ["${LG_BIND_ADDRESS:-127.0.0.1}:${LG_API_PORT:-8000}:8000"]
+    depends_on:
+      init: {condition: service_completed_successfully}
+    healthcheck:
+      test: ["CMD", "python", "scripts/healthcheck.py", "http", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 20s
+  agent-worker:
+    <<: *app
+    command: ["python", "-m", "labelguard.worker", "research"]
+    depends_on:
+      init: {condition: service_completed_successfully}
+      provider-stub: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD", "python", "scripts/healthcheck.py", "worker", "research"]
+      interval: 15s
+      timeout: 5s
+      retries: 4
+      start_period: 25s
+  verifier-worker:
+    <<: *app
+    command: ["python", "-m", "labelguard.worker", "verification"]
+    depends_on:
+      init: {condition: service_completed_successfully}
+    healthcheck:
+      test: ["CMD", "python", "scripts/healthcheck.py", "worker", "verification"]
+      interval: 15s
+      timeout: 5s
+      retries: 4
+      start_period: 25s
+  provider-stub:
+    <<: *app
+    command: ["uvicorn", "labelguard.stub:app", "--host", "0.0.0.0", "--port", "8010"]
+    ports: ["${LG_BIND_ADDRESS:-127.0.0.1}:${LG_STUB_PORT:-8010}:8010"]
+    healthcheck:
+      test: ["CMD", "python", "scripts/healthcheck.py", "http", "http://localhost:8010/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 15s
+  prometheus:
+    image: prom/prometheus:v3.2.1
+    restart: unless-stopped
+    command: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.retention.time=7d"]
+    volumes:
+      - ./infra/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus:/prometheus
+    ports: ["${LG_BIND_ADDRESS:-127.0.0.1}:9090:9090"]
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9090/-/healthy"]
+      interval: 15s
+      timeout: 5s
+      retries: 6
+  grafana:
+    image: grafana/grafana:11.6.0
+    restart: unless-stopped
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+      GF_AUTH_DISABLE_LOGIN_FORM: "true"
+    volumes:
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./infra/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana:/var/lib/grafana
+    ports: ["${LG_BIND_ADDRESS:-127.0.0.1}:3000:3000"]
+    depends_on:
+      prometheus: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 6
+  jaeger:
+    image: jaegertracing/all-in-one:1.63.0
+    restart: unless-stopped
+    environment:
+      COLLECTOR_OTLP_ENABLED: "true"
+    ports: ["${LG_BIND_ADDRESS:-127.0.0.1}:16686:16686"]
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:14269/"]
+      interval: 15s
+      timeout: 5s
+      retries: 6
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.49.2
+    restart: unless-stopped
+    privileged: true
+    devices: ["/dev/kmsg:/dev/kmsg"]
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker:/var/lib/docker:ro
+    profiles: ["resources"]
+
+volumes:
+  state:
+  index:
+  prometheus:
+  grafana:

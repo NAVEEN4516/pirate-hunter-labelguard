@@ -1,0 +1,9 @@
+apiVersion: 1
+providers:
+  - name: LabelGuard
+    orgId: 1
+    folder: Pirate Hunter
+    type: file
+    disableDeletion: true
+    options:
+      path: /var/lib/grafana/dashboards
