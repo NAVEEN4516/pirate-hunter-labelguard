@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "console_errors": [],
+  "mobile_horizontal_overflow": false,
+  "flows": [
+    "render",
+    "submit",
+    "poll",
+    "result",
+    "citations",
+    "activity",
+    "corpus",
+    "team",
+    "mobile"
+  ]
+}

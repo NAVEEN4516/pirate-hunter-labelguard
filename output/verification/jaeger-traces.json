@@ -1,0 +1,37 @@
+[
+  {
+    "trace_id": "f4d8938af7357fd7604451e1fa008abf",
+    "services": [
+      "labelguard-api"
+    ],
+    "spans": 5
+  },
+  {
+    "trace_id": "e8e7202ea4400df1a553396123d500d5",
+    "services": [
+      "labelguard-api"
+    ],
+    "spans": 5
+  },
+  {
+    "trace_id": "5219aee2f9b72efe3b2dd089bd242d06",
+    "services": [
+      "labelguard-api"
+    ],
+    "spans": 5
+  },
+  {
+    "trace_id": "3774c475d19935ba73721d1ffa211119",
+    "services": [
+      "labelguard-api"
+    ],
+    "spans": 5
+  },
+  {
+    "trace_id": "eae5e477ca41780f64200e1e53512120",
+    "services": [
+      "labelguard-api"
+    ],
+    "spans": 4
+  }
+]

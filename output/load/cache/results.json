@@ -1,0 +1,163 @@
+{
+  "method": "10 identical submissions per condition, sequential, real HTTP and two worker processes. Warm-cache priming request excluded. Stub mode, zero actual provider price.",
+  "conditions": {
+    "cache_disabled": {
+      "p50_s": 3.155999999999949,
+      "p95_s": 4.4210000000002765,
+      "mean_cost_per_run": 0.0,
+      "cost_per_100_runs": 0,
+      "mean_model_calls": 7.0,
+      "rows": [
+        {
+          "latency_s": 4.4210000000002765,
+          "server_latency_s": 4.246701240539551,
+          "cached": false,
+          "cost": 0,
+          "model_calls": 7
+        },
+        {
+          "latency_s": 3.407000000000153,
+          "server_latency_s": 3.182480812072754,
+          "cached": false,
+          "cost": 0,
+          "model_calls": 7
+        },
+        {
+          "latency_s": 3.1719999999995707,
+          "server_latency_s": 3.018014907836914,
+          "cached": false,
+          "cost": 0,
+          "model_calls": 7
+        },
+        {
+          "latency_s": 3.155999999999949,
+          "server_latency_s": 2.930211305618286,
+          "cached": false,
+          "cost": 0,
+          "model_calls": 7
+        },
+        {
+          "latency_s": 3.155999999999949,
+          "server_latency_s": 3.0462613105773926,
+          "cached": false,
+          "cost": 0,
+          "model_calls": 7
+        },
+        {
+          "latency_s": 3.141000000000531,
+          "server_latency_s": 2.972740888595581,
+          "cached": false,
+          "cost": 0,
+          "model_calls": 7
+        },
+        {
+          "latency_s": 3.139999999999418,
+          "server_latency_s": 2.9136476516723633,
+          "cached": false,
+          "cost": 0,
+          "model_calls": 7
+        },
+        {
+          "latency_s": 3.157000000000153,
+          "server_latency_s": 3.000290870666504,
+          "cached": false,
+          "cost": 0,
+          "model_calls": 7
+        },
+        {
+          "latency_s": 3.155999999999949,
+          "server_latency_s": 3.0603599548339844,
+          "cached": false,
+          "cost": 0,
+          "model_calls": 7
+        },
+        {
+          "latency_s": 3.1400000000003274,
+          "server_latency_s": 3.032392978668213,
+          "cached": false,
+          "cost": 0,
+          "model_calls": 7
+        }
+      ]
+    },
+    "warm_cache": {
+      "p50_s": 0.03900000000021464,
+      "p95_s": 0.04700000000048021,
+      "mean_cost_per_run": 0.0,
+      "cost_per_100_runs": 0,
+      "mean_model_calls": 0.0,
+      "rows": [
+        {
+          "latency_s": 0.03099999999994907,
+          "server_latency_s": 0.0,
+          "cached": true,
+          "cost": 0,
+          "model_calls": 0
+        },
+        {
+          "latency_s": 0.04699999999957072,
+          "server_latency_s": 0.0,
+          "cached": true,
+          "cost": 0,
+          "model_calls": 0
+        },
+        {
+          "latency_s": 0.032000000000152795,
+          "server_latency_s": 0.0,
+          "cached": true,
+          "cost": 0,
+          "model_calls": 0
+        },
+        {
+          "latency_s": 0.046000000000276486,
+          "server_latency_s": 0.0,
+          "cached": true,
+          "cost": 0,
+          "model_calls": 0
+        },
+        {
+          "latency_s": 0.032000000000152795,
+          "server_latency_s": 0.0,
+          "cached": true,
+          "cost": 0,
+          "model_calls": 0
+        },
+        {
+          "latency_s": 0.03099999999994907,
+          "server_latency_s": 0.0,
+          "cached": true,
+          "cost": 0,
+          "model_calls": 0
+        },
+        {
+          "latency_s": 0.04699999999957072,
+          "server_latency_s": 0.0,
+          "cached": true,
+          "cost": 0,
+          "model_calls": 0
+        },
+        {
+          "latency_s": 0.04700000000048021,
+          "server_latency_s": 0.0,
+          "cached": true,
+          "cost": 0,
+          "model_calls": 0
+        },
+        {
+          "latency_s": 0.04699999999957072,
+          "server_latency_s": 0.0,
+          "cached": true,
+          "cost": 0,
+          "model_calls": 0
+        },
+        {
+          "latency_s": 0.03099999999994907,
+          "server_latency_s": 0.0,
+          "cached": true,
+          "cost": 0,
+          "model_calls": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "tests_passed": 21,
+  "v2_scenarios_passed": 32,
+  "browser_check": {
+    "passed": true,
+    "console_errors": [],
+    "mobile_horizontal_overflow": false,
+    "flows": [
+      "render",
+      "submit",
+      "poll",
+      "result",
+      "citations",
+      "activity",
+      "corpus",
+      "team",
+      "mobile"
+    ]
+  },
+  "connected_trace_id": "79c6aa8ea12bc14ba035f3b0aec7c371",
+  "trace_services": [
+    "labelguard-api",
+    "labelguard-provider-stub",
+    "labelguard-research",
+    "labelguard-verification"
+  ],
+  "demo_fault_controls_disabled": true,
+  "mode": "deterministic_stub",
+  "remote_repository": null
+}

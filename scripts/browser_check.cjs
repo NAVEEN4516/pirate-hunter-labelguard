@@ -1,0 +1,35 @@
+// Local app acceptance check. Pass PLAYWRIGHT_MODULE at runtime when not installed locally.
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const fs=require('fs');
+(async()=>{
+ const browser=await chromium.launch({headless:true,channel:process.env.LG_BROWSER_CHANNEL||undefined});
+ const page=await browser.newPage({viewport:{width:1440,height:1100},deviceScaleFactor:1});
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const base=process.env.LG_TEST_API_URL||'http://127.0.0.1:8000';
+ await page.goto(base,{waitUntil:'networkidle'});
+ await page.locator('#product').waitFor({state:'visible'});
+ await page.waitForFunction(()=>document.querySelector('#product').value.length>0);
+ fs.mkdirSync('output/verification',{recursive:true});
+ await page.screenshot({path:'output/verification/workbench.png',fullPage:true});
+ await page.getByRole('button',{name:'Check label'}).click();
+ await page.locator('#result').waitFor({state:'visible',timeout:60000});
+ if(!(await page.locator('#result').innerText()).includes('Supported checks passed'))throw new Error('Browser did not render the qualifying result');
+ await page.locator('#result details').first().locator('summary').click();
+ await page.screenshot({path:'output/verification/result.png',fullPage:true});
+ await page.getByRole('button',{name:'Run activity'}).click();
+ await page.locator('#run-rows tr').first().waitFor();
+ await page.screenshot({path:'output/verification/activity.png',fullPage:true});
+ await page.getByRole('button',{name:'Evidence library'}).click();
+ await page.locator('#reference-passages details').first().waitFor();
+ await page.getByRole('button',{name:'Project team'}).click();
+ if(!(await page.locator('#team').innerText()).includes('Naveen Prasad M'))throw new Error('Team identity missing');
+ await page.setViewportSize({width:390,height:844});
+ await page.getByRole('button',{name:'New label check'}).click();
+ await page.screenshot({path:'output/verification/mobile.png',fullPage:true});
+ const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth);
+ if(overflow)throw new Error('Mobile horizontal overflow');
+ if(errors.length)throw new Error(errors.join('\n'));
+ fs.writeFileSync('output/verification/browser-results.json',JSON.stringify({passed:true,console_errors:errors,mobile_horizontal_overflow:overflow,flows:['render','submit','poll','result','citations','activity','corpus','team','mobile']},null,2));
+ console.log('Browser acceptance check passed; desktop and mobile screenshots saved.');
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

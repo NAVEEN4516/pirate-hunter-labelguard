@@ -1,0 +1,1282 @@
+{
+  "checked_at": 1793075268.1979485,
+  "records": [
+    {
+      "example": "valid-protein",
+      "submission": {
+        "run_id": "7f3d9110-b774-4792-956d-701e60438009",
+        "status": "queued",
+        "status_url": "/v1/runs/7f3d9110-b774-4792-956d-701e60438009",
+        "cached": false,
+        "correlation_id": "verify-valid-protein"
+      },
+      "run": {
+        "run_id": "7f3d9110-b774-4792-956d-701e60438009",
+        "status": "completed",
+        "submitted_at": 1793075250.4970086,
+        "updated_at": 1793075253.6817539,
+        "latency_s": 3.1847453117370605,
+        "cached": false,
+        "correlation_id": "verify-valid-protein",
+        "result": {
+          "corpus_version": "2d7cb65ae0918ad2f457654d66f6ee2e93ceb55d6aa223628e5f7d7a9bcec467",
+          "findings": [
+            {
+              "citations": [
+                {
+                  "clause": "5(1)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 5,
+                  "passage_id": "LD-5.1",
+                  "quote": "(1) The Name of Food: Every package of food shall carry name of the food which indicate the true nature of the food contained in the package, on the Front of Pack: (a) Where a food is specified by certain essential composition under Food Safety and Standards Regulations made under the Act, that establishes its identity the name provided therein shall be used; (b) In the absence of such name, either a common or usual name or an accompanying description of true nature of food shall be used; (c) It may additionally have a \u201ccoined\u201d, \u201cfanciful\u201d, \u201cbrand\u201d or \u201ctrade name\u201d subject to compliance of Food Safety & Standards (Advertising and Claims) Regulation 2018.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "A food name is declared.",
+              "observed": {},
+              "requirement": "food_name",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(2)(a)-(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 5,
+                  "passage_id": "LD-5.2",
+                  "quote": "(2) List of Ingredients : Except for single ingredient foods, a list of ingredients shall be declared on the label in the following manner:- (a) The list of ingredients shall contain an appropriate title , such as the term \u201cIngredients/List of Ingredients\u201d; (b) The name of ingredients used in the product shall be listed in descending order of their composition by weight or volume, as the case may be at the time of its manufacture;",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "An ingredient list is declared; composition and completeness require manufacturer confirmation.",
+              "observed": {},
+              "requirement": "ingredients",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(3)(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 10,
+                  "passage_id": "LD-5.3",
+                  "quote": "(b) Nutritional Information per 100g or 100ml or per single consumption pack of the product and per serve percentage (%) contribution to Recommended Dietary Allowance calculated on the basis of 2000kcal energy, 67 g total fat, 22 g saturated fat, 2 g trans fat, 50 g added sugar and 2000 mg of sodium (5 g salt) requirement for average adult per day, shall be given on the label containing the following: \u2014 (i) energy value (kcal); (ii) the amounts of (A) Protein (g); (B) Carbohydrate (g) and Total Sugars (g), added sugars (g); (C) Total fat (g), saturated fat (g), trans fat (other than naturally occurring trans fat)(g)and cholesterol (mg); Provided that the content of saturated fat and trans fat may be declared on the label as \u201cnot more than\u201d. 2[\u201cProvided that saturated fat and trans fat to be given only if total fat content is more than 0.5% in final food.\u201d] 2[\u201cProvided further that cholesterol content to be given only for products containing fats of animal origin and where total fat content is more than 0.5%.\u201d] 11 | Version-VIII (09.09.2025) (D) Sodium (mg); (iii) Wherever, numerical information on vitamins and minerals is declared, it shall be expressed in metric units; (iv) Nutrition information panel shall include the amount of food in gram (g) or millilitre (ml) for reference beside the serving measure and the number of servings in the package. Explanation: \u201cserving or serve size\u201d means an amount of food customarily consumed per eating occasion or as defined on the label which is expressed in metric unit. Additionally, it may also be given in common household measures like tea spoon, table spoon, cup that is appropriate to the food. Provided that the food claimed to be enriched with nutrients, such as, minerals, proteins, vitamins, amino acids or enzymes shall give the quantities of such added nutrients on the label.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Required numeric declarations are present in the supported panel.",
+              "observed": {
+                "basis": "per_100g",
+                "missing_fields": []
+              },
+              "requirement": "nutrition_panel",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(4)(a)-(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 13,
+                  "passage_id": "LD-5.4",
+                  "quote": "(4) Declaration regarding Veg or Non veg.- (a) Every package of Non-Vegetarian Food containing ingredients including food additives, processing aids of animal origin shall bear a declaration to this effect made by a symbol and colour code as stipulated below. The symbol shall consist of a brown colour filled triangle inside a square with brown outline having the sides not less than the minimum size specified in the Table m entioned in the regulation 5 (4) (c), as indicated below: Brown colour Provided where any article of food contains egg only as Non -Vegetarian ingredient, the manufacturer, or packer or seller may give declaration to this effect in addition to the said symbol. 14 | Version-VIII (09.09.2025) (b) Every package of Vegetarian Food containing ingredients including food additives, processing aids of plant origin shall bear a declaration to this effect by a symbol and colour code as stipulated below. The symbol shall consist of a green colour filled circle inside a square with green outline having the diameter not less than the minimum size specified in the Table mentioned in the regulation 5 (4) (c), as indicated below: Green colour",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "The declared mark agrees with the supported ingredient screen; artwork requires inspection.",
+              "observed": {},
+              "requirement": "veg_mark",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(6)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 15,
+                  "passage_id": "LD-5.6",
+                  "quote": "(6) Declaration of name and complete address.- (a) The name and complete address of the brand owner, whether or not, he himself is the manufacturer, m arketer, packer or bottler, as the case may be, shall be declared on the label. Such name and address shall be preceded by the qualifying words \u201cManufactured by (Mfg by, Mfd by)\u201d or \u201cMarketed by (Mkt by)\u201d or \u201cManufactured & Marketed by\u201d or \u201cPacked & Marketed by\u201d as the case may be. In case of alcoholic beverages , \u201cBottled by\u201d or \u201cBlended and Bottled by \u201cor \u201cImported and Bottled by\u201d. Or \u201cdistilled and bottled by\u201d may also be declared on label. (b) Where an article of food is imported into India, the package of food shall also carry the name and complete address of the importer in India. Provided further that where any food article manufactured outside India is packaged or bottled in India, the package containing such food article shall also bear on the label, the name of the country of origin of the food article and the name and complete address of the importer and the premises of packing or bottling in India.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Brand-owner name and address are declared.",
+              "observed": {},
+              "requirement": "brand_owner",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(7)(a)-(c)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 15,
+                  "passage_id": "LD-5.7",
+                  "quote": "(7) FSSAI logo and license number.- (a) The FSSAI logo and license number under the Act shall be di splayed on the label of the food package in contrast color to the background as below: 16 | Version-VIII (09.09.2025) Lic. No. XXXXXXXXXXXXXX (b) The FSSAI logo and license number of the brand owner shall be displayed on the label. In addition, the license number of the manufacturer or marketer or packer or bottler, as the case may be, if different from the brand owner, shall also be displayed on the label. (c) In case of imported food products, the importer shall display FSSAI logo and license number along with name and address of importer.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "FSSAI logo and a 14-digit licence declaration are present; authenticity is not checked.",
+              "observed": {},
+              "requirement": "fssai_declaration",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(8)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 16,
+                  "passage_id": "LD-5.8",
+                  "quote": "(8) Net quantity, Retail Sale Price and Consumer Care details.- Declaration and manner of declaration of Net quantity , Retail Sale Price and Consumer Care details shall be as provided in Legal Metrology Act, 2009 (1 of 2010) and the Rules made there under.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Net quantity, price and consumer care are declared. Detailed Legal Metrology compliance remains outside the corpus.",
+              "observed": {},
+              "requirement": "quantity_price_care_presence",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(9)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 16,
+                  "passage_id": "LD-5.9",
+                  "quote": "(9) Lot/Code/Batch identification.- A batch number or code number or lot number shall be declared on the label.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Batch identification is declared.",
+              "observed": {},
+              "requirement": "batch",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(10)(a)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 16,
+                  "passage_id": "LD-5.10",
+                  "quote": "(10) Date Marking.- (a) \u201cDate of manufacture or packaging\u201d and \u201cExpiry/Use by\u201d shall be declared on the label. However, expression \u201cBest before\u201d may also be used as optional or additional information.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Manufacture and expiry/use-by dates are declared.",
+              "observed": {},
+              "requirement": "dates",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(14)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 18,
+                  "passage_id": "LD-5.14",
+                  "quote": "(14) Declaration regarding Food allergen: The following foods and ingredients which are known to cause allergy shall be declared separately as Contains............................ (Name of allergy causing ingredients) (i) Cereals containing gluten; i.e., wheat, rye, barley , oats, spelt or their hybridized strains and products of these (To be declared as name of the cereal); 2[except (a) wheat based glucose syrups including dextrose*; (b) wheat based maltodextrins*; (c) glucose syrups based on barley; (d) cereals used for making alcoholic distillates including ethyl alcohol of agricultural origin; Note: * The products thereof, provided these ingredients have been assessed as safe and gluten shall not be more than 20 mg/kg.] (ii) Crustacean and their products (To be declared as Crustacean); (iii) Milk & Milk products (To be declared as Milk); (iv) Eggs and egg products (To be declared as Egg); (v) Fish and fish products (To be declared as Fish); (vi) Peanuts, tree nuts (e.g. almonds, walnuts, pistachio, cashew nuts) and their products (To be declared as Nut); (vii) Soybeans and their products (To be declared as Soy); (viii) Sulphite in concentrations of 10mg/kg or more (To be declared as sulphite) 19 | Version-VIII (09.09.2025) Provided that in case presence of ingredients due to cross contamination which are known to cause allergy may be declared separately as May Contains.......................... (Name of allergy causing ingredients). 2[Provided further that this declaration is not required in case of oils and distilled alcoholic beverages derived from these ingredients and where the product itself is a food allergen.] Raw agricultural commodities are exempted from the allergen labelling requirements.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Known allergens from the supported ingredient screen are separately declared.",
+              "observed": {
+                "detected": [
+                  "oats",
+                  "soy"
+                ],
+                "missing": []
+              },
+              "requirement": "allergens",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "4(3), 4(5), 4(7)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 4,
+                  "passage_id": "LD-4",
+                  "quote": "(3) Pre-packaged food shall not be described or presented on any label or in any labelling in a manner that is false, misleading or deceptive or is likely to create an erroneous impression regarding its character in any respect; (4) Any information or pictorial device wri tten, printed, or graphic matter may be displayed on the label provided that it is not in conflict with the requirements of these regulations; (5) The particulars of declaration required under these Regulations to be specified on the label shall be in English or Hindi in Devnagri script: Provided that nothing herein contained shall prevent the use of any other language in addition to the language required under this regulation: Provided further that the information prov ided in such other language shall not contradict the information on the label in the English or Hindi; (6) Label on pre-packaged foods shall be applied in such a manner that it will not become separated from the container; (7) Contents on the label shall be clear, unambiguous, prominent, conspicuous, indelible and readily legible by the consumer under normal conditions of purchase and use;",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "English or Hindi is declared as a label language.",
+              "observed": {},
+              "requirement": "language",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(3)(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 10,
+                  "passage_id": "LD-5.3",
+                  "quote": "(b) Nutritional Information per 100g or 100ml or per single consumption pack of the product and per serve percentage (%) contribution to Recommended Dietary Allowance calculated on the basis of 2000kcal energy, 67 g total fat, 22 g saturated fat, 2 g trans fat, 50 g added sugar and 2000 mg of sodium (5 g salt) requirement for average adult per day, shall be given on the label containing the following: \u2014 (i) energy value (kcal); (ii) the amounts of (A) Protein (g); (B) Carbohydrate (g) and Total Sugars (g), added sugars (g); (C) Total fat (g), saturated fat (g), trans fat (other than naturally occurring trans fat)(g)and cholesterol (mg); Provided that the content of saturated fat and trans fat may be declared on the label as \u201cnot more than\u201d. 2[\u201cProvided that saturated fat and trans fat to be given only if total fat content is more than 0.5% in final food.\u201d] 2[\u201cProvided further that cholesterol content to be given only for products containing fats of animal origin and where total fat content is more than 0.5%.\u201d] 11 | Version-VIII (09.09.2025) (D) Sodium (mg); (iii) Wherever, numerical information on vitamins and minerals is declared, it shall be expressed in metric units; (iv) Nutrition information panel shall include the amount of food in gram (g) or millilitre (ml) for reference beside the serving measure and the number of servings in the package. Explanation: \u201cserving or serve size\u201d means an amount of food customarily consumed per eating occasion or as defined on the label which is expressed in metric unit. Additionally, it may also be given in common household measures like tea spoon, table spoon, cup that is appropriate to the food. Provided that the food claimed to be enriched with nutrients, such as, minerals, proteins, vitamins, amino acids or enzymes shall give the quantities of such added nutrients on the label.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                },
+                {
+                  "clause": "5(3)",
+                  "document": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+                  "page": 4,
+                  "passage_id": "AC-5.3",
+                  "quote": "[(3) When a nutrient content or any synonymous claim is made for the nutrients indicated in Schedule -I, it shall be made in accordance with the conditions specified in the said Schedule, provided flexibility in the wording of a nutrition claim is as per Schedule-II, or the use of any other word, if they are in accordance with conditions specified in Schedule-I and the meaning of the claim is not altered.]",
+                  "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf"
+                },
+                {
+                  "clause": "Schedule I, item 11 (Protein)",
+                  "document": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+                  "page": 9,
+                  "passage_id": "AC-PROTEIN",
+                  "quote": "11. Protein Source 10 per cent. of Recommended Dietary Allowance per 100 g for solids 5 per cent. of Recommended Dietary Allowance per 100 ml for liquids, or 5 per cent. of Recommended Dietary Allowance per 100 kcal, or 10 per cent. of Recommended Dietary Allowance per serving Rich / High 20 per cent. of Recommended Dietary Allowance per 100 g for solids 10 per cent. of Recommended Dietary Allowance per 100 ml for liquids, or 10 per cent. of Recommended Dietary Allowance per 100 kcal, or 20 per cent. of Recommended Dietary Allowance per serving",
+                  "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf"
+                },
+                {
+                  "clause": "2(1)(n)",
+                  "document": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+                  "page": 2,
+                  "passage_id": "AC-RDA",
+                  "quote": "(n) \u201crecommended dietary allowances\u201d means the average daily dietary nutrient intake level sufficient to meet the nutrient requirement of nearly all (97 to 98 per cent.) healthy individuals in a particular life stage and gender group. Explanations.- For the purposes of this clause , recommended dietary allowances values as provided in current Indian Council of Medical Research Nutrient Requirements and Recommended Dietary Allowances for Indians shall be applicable and if Indian recommended dietary allowances is not available for any nutrient then values provided in Codex or World Health Organization guidelines shall be applicable;",
+                  "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf"
+                }
+              ],
+              "explanation": "Declared protein is 6 g/100g. With the supplied 54 g/day RDA, compare >= 5.4 g/100g OR >= 2.7 g/100kcal OR >= 5.4 g/serving. At least one solid-food condition is met, conditional on the benchmark and substantiation.",
+              "observed": {
+                "protein_per_100g": 6.0,
+                "protein_per_100kcal": 1.5957446808510638,
+                "protein_per_serving": 2.4,
+                "qualifying_branches": [
+                  "per_100g"
+                ],
+                "rda_g": 54.0,
+                "rda_reference": "Illustrative benchmark supplied for arithmetic demonstration; the reviewer must replace this with the applicable current ICMR reference.",
+                "threshold_per_100g": 5.4,
+                "threshold_per_100kcal": 2.7,
+                "threshold_per_serving": 5.4
+              },
+              "requirement": "source_protein",
+              "status": "met"
+            }
+          ],
+          "human_action": "A regulatory affairs professional must review the evidence and decide on printing.",
+          "limitations": [
+            "Findings cover the implemented checks for domestic retail processed breakfast cereals only.",
+            "Structured declarations are the proposed label data; artwork, font, symbol dimensions and placement are not inspected.",
+            "Licence authenticity, ingredient exemptions, manufacturing evidence and detailed Legal Metrology requirements need a professional check.",
+            "Claim arithmetic is conditional on the supplied RDA basis and declared values; laboratory substantiation is not validated."
+          ],
+          "mode": "stub",
+          "print_authorized": false,
+          "prompt_version": "v2",
+          "route": "clear-for-print",
+          "summary": "No issues detected in the supported checks. A professional must decide whether to print.",
+          "verified": true
+        },
+        "usage": {
+          "prompt_tokens": 15354,
+          "completion_tokens": 259,
+          "cost": 0,
+          "model_calls": 7,
+          "usage_available": true,
+          "cost_complete": true,
+          "usage_kind": "synthetic_stub",
+          "cache_hit_cost": null
+        }
+      }
+    },
+    {
+      "example": "insufficient-protein",
+      "submission": {
+        "run_id": "859aac10-1bc0-400d-9a83-1ccf2e21ad12",
+        "status": "queued",
+        "status_url": "/v1/runs/859aac10-1bc0-400d-9a83-1ccf2e21ad12",
+        "cached": false,
+        "correlation_id": "verify-insufficient-protein"
+      },
+      "run": {
+        "run_id": "859aac10-1bc0-400d-9a83-1ccf2e21ad12",
+        "status": "completed",
+        "submitted_at": 1793075253.948958,
+        "updated_at": 1793075259.6655579,
+        "latency_s": 5.716599941253662,
+        "cached": false,
+        "correlation_id": "verify-insufficient-protein",
+        "result": {
+          "corpus_version": "2d7cb65ae0918ad2f457654d66f6ee2e93ceb55d6aa223628e5f7d7a9bcec467",
+          "findings": [
+            {
+              "citations": [
+                {
+                  "clause": "5(1)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 5,
+                  "passage_id": "LD-5.1",
+                  "quote": "(1) The Name of Food: Every package of food shall carry name of the food which indicate the true nature of the food contained in the package, on the Front of Pack: (a) Where a food is specified by certain essential composition under Food Safety and Standards Regulations made under the Act, that establishes its identity the name provided therein shall be used; (b) In the absence of such name, either a common or usual name or an accompanying description of true nature of food shall be used; (c) It may additionally have a \u201ccoined\u201d, \u201cfanciful\u201d, \u201cbrand\u201d or \u201ctrade name\u201d subject to compliance of Food Safety & Standards (Advertising and Claims) Regulation 2018.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "A food name is declared.",
+              "observed": {},
+              "requirement": "food_name",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(2)(a)-(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 5,
+                  "passage_id": "LD-5.2",
+                  "quote": "(2) List of Ingredients : Except for single ingredient foods, a list of ingredients shall be declared on the label in the following manner:- (a) The list of ingredients shall contain an appropriate title , such as the term \u201cIngredients/List of Ingredients\u201d; (b) The name of ingredients used in the product shall be listed in descending order of their composition by weight or volume, as the case may be at the time of its manufacture;",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "An ingredient list is declared; composition and completeness require manufacturer confirmation.",
+              "observed": {},
+              "requirement": "ingredients",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(3)(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 10,
+                  "passage_id": "LD-5.3",
+                  "quote": "(b) Nutritional Information per 100g or 100ml or per single consumption pack of the product and per serve percentage (%) contribution to Recommended Dietary Allowance calculated on the basis of 2000kcal energy, 67 g total fat, 22 g saturated fat, 2 g trans fat, 50 g added sugar and 2000 mg of sodium (5 g salt) requirement for average adult per day, shall be given on the label containing the following: \u2014 (i) energy value (kcal); (ii) the amounts of (A) Protein (g); (B) Carbohydrate (g) and Total Sugars (g), added sugars (g); (C) Total fat (g), saturated fat (g), trans fat (other than naturally occurring trans fat)(g)and cholesterol (mg); Provided that the content of saturated fat and trans fat may be declared on the label as \u201cnot more than\u201d. 2[\u201cProvided that saturated fat and trans fat to be given only if total fat content is more than 0.5% in final food.\u201d] 2[\u201cProvided further that cholesterol content to be given only for products containing fats of animal origin and where total fat content is more than 0.5%.\u201d] 11 | Version-VIII (09.09.2025) (D) Sodium (mg); (iii) Wherever, numerical information on vitamins and minerals is declared, it shall be expressed in metric units; (iv) Nutrition information panel shall include the amount of food in gram (g) or millilitre (ml) for reference beside the serving measure and the number of servings in the package. Explanation: \u201cserving or serve size\u201d means an amount of food customarily consumed per eating occasion or as defined on the label which is expressed in metric unit. Additionally, it may also be given in common household measures like tea spoon, table spoon, cup that is appropriate to the food. Provided that the food claimed to be enriched with nutrients, such as, minerals, proteins, vitamins, amino acids or enzymes shall give the quantities of such added nutrients on the label.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Required numeric declarations are present in the supported panel.",
+              "observed": {
+                "basis": "per_100g",
+                "missing_fields": []
+              },
+              "requirement": "nutrition_panel",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(4)(a)-(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 13,
+                  "passage_id": "LD-5.4",
+                  "quote": "(4) Declaration regarding Veg or Non veg.- (a) Every package of Non-Vegetarian Food containing ingredients including food additives, processing aids of animal origin shall bear a declaration to this effect made by a symbol and colour code as stipulated below. The symbol shall consist of a brown colour filled triangle inside a square with brown outline having the sides not less than the minimum size specified in the Table m entioned in the regulation 5 (4) (c), as indicated below: Brown colour Provided where any article of food contains egg only as Non -Vegetarian ingredient, the manufacturer, or packer or seller may give declaration to this effect in addition to the said symbol. 14 | Version-VIII (09.09.2025) (b) Every package of Vegetarian Food containing ingredients including food additives, processing aids of plant origin shall bear a declaration to this effect by a symbol and colour code as stipulated below. The symbol shall consist of a green colour filled circle inside a square with green outline having the diameter not less than the minimum size specified in the Table mentioned in the regulation 5 (4) (c), as indicated below: Green colour",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "The declared mark agrees with the supported ingredient screen; artwork requires inspection.",
+              "observed": {},
+              "requirement": "veg_mark",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(6)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 15,
+                  "passage_id": "LD-5.6",
+                  "quote": "(6) Declaration of name and complete address.- (a) The name and complete address of the brand owner, whether or not, he himself is the manufacturer, m arketer, packer or bottler, as the case may be, shall be declared on the label. Such name and address shall be preceded by the qualifying words \u201cManufactured by (Mfg by, Mfd by)\u201d or \u201cMarketed by (Mkt by)\u201d or \u201cManufactured & Marketed by\u201d or \u201cPacked & Marketed by\u201d as the case may be. In case of alcoholic beverages , \u201cBottled by\u201d or \u201cBlended and Bottled by \u201cor \u201cImported and Bottled by\u201d. Or \u201cdistilled and bottled by\u201d may also be declared on label. (b) Where an article of food is imported into India, the package of food shall also carry the name and complete address of the importer in India. Provided further that where any food article manufactured outside India is packaged or bottled in India, the package containing such food article shall also bear on the label, the name of the country of origin of the food article and the name and complete address of the importer and the premises of packing or bottling in India.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Brand-owner name and address are declared.",
+              "observed": {},
+              "requirement": "brand_owner",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(7)(a)-(c)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 15,
+                  "passage_id": "LD-5.7",
+                  "quote": "(7) FSSAI logo and license number.- (a) The FSSAI logo and license number under the Act shall be di splayed on the label of the food package in contrast color to the background as below: 16 | Version-VIII (09.09.2025) Lic. No. XXXXXXXXXXXXXX (b) The FSSAI logo and license number of the brand owner shall be displayed on the label. In addition, the license number of the manufacturer or marketer or packer or bottler, as the case may be, if different from the brand owner, shall also be displayed on the label. (c) In case of imported food products, the importer shall display FSSAI logo and license number along with name and address of importer.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "FSSAI logo and a 14-digit licence declaration are present; authenticity is not checked.",
+              "observed": {},
+              "requirement": "fssai_declaration",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(8)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 16,
+                  "passage_id": "LD-5.8",
+                  "quote": "(8) Net quantity, Retail Sale Price and Consumer Care details.- Declaration and manner of declaration of Net quantity , Retail Sale Price and Consumer Care details shall be as provided in Legal Metrology Act, 2009 (1 of 2010) and the Rules made there under.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Net quantity, price and consumer care are declared. Detailed Legal Metrology compliance remains outside the corpus.",
+              "observed": {},
+              "requirement": "quantity_price_care_presence",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(9)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 16,
+                  "passage_id": "LD-5.9",
+                  "quote": "(9) Lot/Code/Batch identification.- A batch number or code number or lot number shall be declared on the label.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Batch identification is declared.",
+              "observed": {},
+              "requirement": "batch",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(10)(a)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 16,
+                  "passage_id": "LD-5.10",
+                  "quote": "(10) Date Marking.- (a) \u201cDate of manufacture or packaging\u201d and \u201cExpiry/Use by\u201d shall be declared on the label. However, expression \u201cBest before\u201d may also be used as optional or additional information.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Manufacture and expiry/use-by dates are declared.",
+              "observed": {},
+              "requirement": "dates",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(14)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 18,
+                  "passage_id": "LD-5.14",
+                  "quote": "(14) Declaration regarding Food allergen: The following foods and ingredients which are known to cause allergy shall be declared separately as Contains............................ (Name of allergy causing ingredients) (i) Cereals containing gluten; i.e., wheat, rye, barley , oats, spelt or their hybridized strains and products of these (To be declared as name of the cereal); 2[except (a) wheat based glucose syrups including dextrose*; (b) wheat based maltodextrins*; (c) glucose syrups based on barley; (d) cereals used for making alcoholic distillates including ethyl alcohol of agricultural origin; Note: * The products thereof, provided these ingredients have been assessed as safe and gluten shall not be more than 20 mg/kg.] (ii) Crustacean and their products (To be declared as Crustacean); (iii) Milk & Milk products (To be declared as Milk); (iv) Eggs and egg products (To be declared as Egg); (v) Fish and fish products (To be declared as Fish); (vi) Peanuts, tree nuts (e.g. almonds, walnuts, pistachio, cashew nuts) and their products (To be declared as Nut); (vii) Soybeans and their products (To be declared as Soy); (viii) Sulphite in concentrations of 10mg/kg or more (To be declared as sulphite) 19 | Version-VIII (09.09.2025) Provided that in case presence of ingredients due to cross contamination which are known to cause allergy may be declared separately as May Contains.......................... (Name of allergy causing ingredients). 2[Provided further that this declaration is not required in case of oils and distilled alcoholic beverages derived from these ingredients and where the product itself is a food allergen.] Raw agricultural commodities are exempted from the allergen labelling requirements.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Known allergens from the supported ingredient screen are separately declared.",
+              "observed": {
+                "detected": [
+                  "oats",
+                  "soy"
+                ],
+                "missing": []
+              },
+              "requirement": "allergens",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "4(3), 4(5), 4(7)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 4,
+                  "passage_id": "LD-4",
+                  "quote": "(3) Pre-packaged food shall not be described or presented on any label or in any labelling in a manner that is false, misleading or deceptive or is likely to create an erroneous impression regarding its character in any respect; (4) Any information or pictorial device wri tten, printed, or graphic matter may be displayed on the label provided that it is not in conflict with the requirements of these regulations; (5) The particulars of declaration required under these Regulations to be specified on the label shall be in English or Hindi in Devnagri script: Provided that nothing herein contained shall prevent the use of any other language in addition to the language required under this regulation: Provided further that the information prov ided in such other language shall not contradict the information on the label in the English or Hindi; (6) Label on pre-packaged foods shall be applied in such a manner that it will not become separated from the container; (7) Contents on the label shall be clear, unambiguous, prominent, conspicuous, indelible and readily legible by the consumer under normal conditions of purchase and use;",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "English or Hindi is declared as a label language.",
+              "observed": {},
+              "requirement": "language",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(3)(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 10,
+                  "passage_id": "LD-5.3",
+                  "quote": "(b) Nutritional Information per 100g or 100ml or per single consumption pack of the product and per serve percentage (%) contribution to Recommended Dietary Allowance calculated on the basis of 2000kcal energy, 67 g total fat, 22 g saturated fat, 2 g trans fat, 50 g added sugar and 2000 mg of sodium (5 g salt) requirement for average adult per day, shall be given on the label containing the following: \u2014 (i) energy value (kcal); (ii) the amounts of (A) Protein (g); (B) Carbohydrate (g) and Total Sugars (g), added sugars (g); (C) Total fat (g), saturated fat (g), trans fat (other than naturally occurring trans fat)(g)and cholesterol (mg); Provided that the content of saturated fat and trans fat may be declared on the label as \u201cnot more than\u201d. 2[\u201cProvided that saturated fat and trans fat to be given only if total fat content is more than 0.5% in final food.\u201d] 2[\u201cProvided further that cholesterol content to be given only for products containing fats of animal origin and where total fat content is more than 0.5%.\u201d] 11 | Version-VIII (09.09.2025) (D) Sodium (mg); (iii) Wherever, numerical information on vitamins and minerals is declared, it shall be expressed in metric units; (iv) Nutrition information panel shall include the amount of food in gram (g) or millilitre (ml) for reference beside the serving measure and the number of servings in the package. Explanation: \u201cserving or serve size\u201d means an amount of food customarily consumed per eating occasion or as defined on the label which is expressed in metric unit. Additionally, it may also be given in common household measures like tea spoon, table spoon, cup that is appropriate to the food. Provided that the food claimed to be enriched with nutrients, such as, minerals, proteins, vitamins, amino acids or enzymes shall give the quantities of such added nutrients on the label.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                },
+                {
+                  "clause": "5(3)",
+                  "document": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+                  "page": 4,
+                  "passage_id": "AC-5.3",
+                  "quote": "[(3) When a nutrient content or any synonymous claim is made for the nutrients indicated in Schedule -I, it shall be made in accordance with the conditions specified in the said Schedule, provided flexibility in the wording of a nutrition claim is as per Schedule-II, or the use of any other word, if they are in accordance with conditions specified in Schedule-I and the meaning of the claim is not altered.]",
+                  "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf"
+                },
+                {
+                  "clause": "Schedule I, item 11 (Protein)",
+                  "document": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+                  "page": 9,
+                  "passage_id": "AC-PROTEIN",
+                  "quote": "11. Protein Source 10 per cent. of Recommended Dietary Allowance per 100 g for solids 5 per cent. of Recommended Dietary Allowance per 100 ml for liquids, or 5 per cent. of Recommended Dietary Allowance per 100 kcal, or 10 per cent. of Recommended Dietary Allowance per serving Rich / High 20 per cent. of Recommended Dietary Allowance per 100 g for solids 10 per cent. of Recommended Dietary Allowance per 100 ml for liquids, or 10 per cent. of Recommended Dietary Allowance per 100 kcal, or 20 per cent. of Recommended Dietary Allowance per serving",
+                  "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf"
+                },
+                {
+                  "clause": "2(1)(n)",
+                  "document": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+                  "page": 2,
+                  "passage_id": "AC-RDA",
+                  "quote": "(n) \u201crecommended dietary allowances\u201d means the average daily dietary nutrient intake level sufficient to meet the nutrient requirement of nearly all (97 to 98 per cent.) healthy individuals in a particular life stage and gender group. Explanations.- For the purposes of this clause , recommended dietary allowances values as provided in current Indian Council of Medical Research Nutrient Requirements and Recommended Dietary Allowances for Indians shall be applicable and if Indian recommended dietary allowances is not available for any nutrient then values provided in Codex or World Health Organization guidelines shall be applicable;",
+                  "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf"
+                }
+              ],
+              "explanation": "Declared protein is 3 g/100g. With the supplied 54 g/day RDA, compare >= 5.4 g/100g OR >= 2.7 g/100kcal OR >= 5.4 g/serving. No evaluated condition is met; revise the claim or declared formulation.",
+              "observed": {
+                "protein_per_100g": 3.0,
+                "protein_per_100kcal": 0.7978723404255319,
+                "protein_per_serving": 1.2,
+                "qualifying_branches": [],
+                "rda_g": 54.0,
+                "rda_reference": "Illustrative benchmark supplied for arithmetic demonstration; the reviewer must replace this with the applicable current ICMR reference.",
+                "threshold_per_100g": 5.4,
+                "threshold_per_100kcal": 2.7,
+                "threshold_per_serving": 5.4
+              },
+              "requirement": "source_protein",
+              "status": "unmet"
+            }
+          ],
+          "human_action": "A regulatory affairs professional must review the evidence and decide on printing.",
+          "limitations": [
+            "Findings cover the implemented checks for domestic retail processed breakfast cereals only.",
+            "Structured declarations are the proposed label data; artwork, font, symbol dimensions and placement are not inspected.",
+            "Licence authenticity, ingredient exemptions, manufacturing evidence and detailed Legal Metrology requirements need a professional check.",
+            "Claim arithmetic is conditional on the supplied RDA basis and declared values; laboratory substantiation is not validated."
+          ],
+          "mode": "stub",
+          "print_authorized": false,
+          "prompt_version": "v2",
+          "route": "revise-and-recheck",
+          "summary": "Revise the unmet declarations or claims and submit the label again.",
+          "verified": true
+        },
+        "usage": {
+          "prompt_tokens": 15354,
+          "completion_tokens": 259,
+          "cost": 0,
+          "model_calls": 7,
+          "usage_available": true,
+          "cost_complete": true,
+          "usage_kind": "synthetic_stub",
+          "cache_hit_cost": null
+        }
+      }
+    },
+    {
+      "example": "out-of-scope",
+      "submission": {
+        "run_id": "61326587-7c5a-4653-a748-55f494eab039",
+        "status": "queued",
+        "status_url": "/v1/runs/61326587-7c5a-4653-a748-55f494eab039",
+        "cached": false,
+        "correlation_id": "verify-out-of-scope"
+      },
+      "run": {
+        "run_id": "61326587-7c5a-4653-a748-55f494eab039",
+        "status": "completed",
+        "submitted_at": 1793075259.8582838,
+        "updated_at": 1793075262.80974,
+        "latency_s": 2.951456308364868,
+        "cached": false,
+        "correlation_id": "verify-out-of-scope",
+        "result": {
+          "corpus_version": "2d7cb65ae0918ad2f457654d66f6ee2e93ceb55d6aa223628e5f7d7a9bcec467",
+          "findings": [
+            {
+              "citations": [
+                {
+                  "clause": "5(1)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 5,
+                  "passage_id": "LD-5.1",
+                  "quote": "(1) The Name of Food: Every package of food shall carry name of the food which indicate the true nature of the food contained in the package, on the Front of Pack: (a) Where a food is specified by certain essential composition under Food Safety and Standards Regulations made under the Act, that establishes its identity the name provided therein shall be used; (b) In the absence of such name, either a common or usual name or an accompanying description of true nature of food shall be used; (c) It may additionally have a \u201ccoined\u201d, \u201cfanciful\u201d, \u201cbrand\u201d or \u201ctrade name\u201d subject to compliance of Food Safety & Standards (Advertising and Claims) Regulation 2018.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "A food name is declared.",
+              "observed": {},
+              "requirement": "food_name",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(2)(a)-(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 5,
+                  "passage_id": "LD-5.2",
+                  "quote": "(2) List of Ingredients : Except for single ingredient foods, a list of ingredients shall be declared on the label in the following manner:- (a) The list of ingredients shall contain an appropriate title , such as the term \u201cIngredients/List of Ingredients\u201d; (b) The name of ingredients used in the product shall be listed in descending order of their composition by weight or volume, as the case may be at the time of its manufacture;",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "An ingredient list is declared; composition and completeness require manufacturer confirmation.",
+              "observed": {},
+              "requirement": "ingredients",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(3)(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 10,
+                  "passage_id": "LD-5.3",
+                  "quote": "(b) Nutritional Information per 100g or 100ml or per single consumption pack of the product and per serve percentage (%) contribution to Recommended Dietary Allowance calculated on the basis of 2000kcal energy, 67 g total fat, 22 g saturated fat, 2 g trans fat, 50 g added sugar and 2000 mg of sodium (5 g salt) requirement for average adult per day, shall be given on the label containing the following: \u2014 (i) energy value (kcal); (ii) the amounts of (A) Protein (g); (B) Carbohydrate (g) and Total Sugars (g), added sugars (g); (C) Total fat (g), saturated fat (g), trans fat (other than naturally occurring trans fat)(g)and cholesterol (mg); Provided that the content of saturated fat and trans fat may be declared on the label as \u201cnot more than\u201d. 2[\u201cProvided that saturated fat and trans fat to be given only if total fat content is more than 0.5% in final food.\u201d] 2[\u201cProvided further that cholesterol content to be given only for products containing fats of animal origin and where total fat content is more than 0.5%.\u201d] 11 | Version-VIII (09.09.2025) (D) Sodium (mg); (iii) Wherever, numerical information on vitamins and minerals is declared, it shall be expressed in metric units; (iv) Nutrition information panel shall include the amount of food in gram (g) or millilitre (ml) for reference beside the serving measure and the number of servings in the package. Explanation: \u201cserving or serve size\u201d means an amount of food customarily consumed per eating occasion or as defined on the label which is expressed in metric unit. Additionally, it may also be given in common household measures like tea spoon, table spoon, cup that is appropriate to the food. Provided that the food claimed to be enriched with nutrients, such as, minerals, proteins, vitamins, amino acids or enzymes shall give the quantities of such added nutrients on the label.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Required numeric declarations are present in the supported panel.",
+              "observed": {
+                "basis": "per_100g",
+                "missing_fields": []
+              },
+              "requirement": "nutrition_panel",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(4)(a)-(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 13,
+                  "passage_id": "LD-5.4",
+                  "quote": "(4) Declaration regarding Veg or Non veg.- (a) Every package of Non-Vegetarian Food containing ingredients including food additives, processing aids of animal origin shall bear a declaration to this effect made by a symbol and colour code as stipulated below. The symbol shall consist of a brown colour filled triangle inside a square with brown outline having the sides not less than the minimum size specified in the Table m entioned in the regulation 5 (4) (c), as indicated below: Brown colour Provided where any article of food contains egg only as Non -Vegetarian ingredient, the manufacturer, or packer or seller may give declaration to this effect in addition to the said symbol. 14 | Version-VIII (09.09.2025) (b) Every package of Vegetarian Food containing ingredients including food additives, processing aids of plant origin shall bear a declaration to this effect by a symbol and colour code as stipulated below. The symbol shall consist of a green colour filled circle inside a square with green outline having the diameter not less than the minimum size specified in the Table mentioned in the regulation 5 (4) (c), as indicated below: Green colour",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "The declared mark agrees with the supported ingredient screen; artwork requires inspection.",
+              "observed": {},
+              "requirement": "veg_mark",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(6)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 15,
+                  "passage_id": "LD-5.6",
+                  "quote": "(6) Declaration of name and complete address.- (a) The name and complete address of the brand owner, whether or not, he himself is the manufacturer, m arketer, packer or bottler, as the case may be, shall be declared on the label. Such name and address shall be preceded by the qualifying words \u201cManufactured by (Mfg by, Mfd by)\u201d or \u201cMarketed by (Mkt by)\u201d or \u201cManufactured & Marketed by\u201d or \u201cPacked & Marketed by\u201d as the case may be. In case of alcoholic beverages , \u201cBottled by\u201d or \u201cBlended and Bottled by \u201cor \u201cImported and Bottled by\u201d. Or \u201cdistilled and bottled by\u201d may also be declared on label. (b) Where an article of food is imported into India, the package of food shall also carry the name and complete address of the importer in India. Provided further that where any food article manufactured outside India is packaged or bottled in India, the package containing such food article shall also bear on the label, the name of the country of origin of the food article and the name and complete address of the importer and the premises of packing or bottling in India.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Brand-owner name and address are declared.",
+              "observed": {},
+              "requirement": "brand_owner",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(7)(a)-(c)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 15,
+                  "passage_id": "LD-5.7",
+                  "quote": "(7) FSSAI logo and license number.- (a) The FSSAI logo and license number under the Act shall be di splayed on the label of the food package in contrast color to the background as below: 16 | Version-VIII (09.09.2025) Lic. No. XXXXXXXXXXXXXX (b) The FSSAI logo and license number of the brand owner shall be displayed on the label. In addition, the license number of the manufacturer or marketer or packer or bottler, as the case may be, if different from the brand owner, shall also be displayed on the label. (c) In case of imported food products, the importer shall display FSSAI logo and license number along with name and address of importer.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "FSSAI logo and a 14-digit licence declaration are present; authenticity is not checked.",
+              "observed": {},
+              "requirement": "fssai_declaration",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(8)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 16,
+                  "passage_id": "LD-5.8",
+                  "quote": "(8) Net quantity, Retail Sale Price and Consumer Care details.- Declaration and manner of declaration of Net quantity , Retail Sale Price and Consumer Care details shall be as provided in Legal Metrology Act, 2009 (1 of 2010) and the Rules made there under.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Net quantity, price and consumer care are declared. Detailed Legal Metrology compliance remains outside the corpus.",
+              "observed": {},
+              "requirement": "quantity_price_care_presence",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(9)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 16,
+                  "passage_id": "LD-5.9",
+                  "quote": "(9) Lot/Code/Batch identification.- A batch number or code number or lot number shall be declared on the label.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Batch identification is declared.",
+              "observed": {},
+              "requirement": "batch",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(10)(a)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 16,
+                  "passage_id": "LD-5.10",
+                  "quote": "(10) Date Marking.- (a) \u201cDate of manufacture or packaging\u201d and \u201cExpiry/Use by\u201d shall be declared on the label. However, expression \u201cBest before\u201d may also be used as optional or additional information.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Manufacture and expiry/use-by dates are declared.",
+              "observed": {},
+              "requirement": "dates",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(14)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 18,
+                  "passage_id": "LD-5.14",
+                  "quote": "(14) Declaration regarding Food allergen: The following foods and ingredients which are known to cause allergy shall be declared separately as Contains............................ (Name of allergy causing ingredients) (i) Cereals containing gluten; i.e., wheat, rye, barley , oats, spelt or their hybridized strains and products of these (To be declared as name of the cereal); 2[except (a) wheat based glucose syrups including dextrose*; (b) wheat based maltodextrins*; (c) glucose syrups based on barley; (d) cereals used for making alcoholic distillates including ethyl alcohol of agricultural origin; Note: * The products thereof, provided these ingredients have been assessed as safe and gluten shall not be more than 20 mg/kg.] (ii) Crustacean and their products (To be declared as Crustacean); (iii) Milk & Milk products (To be declared as Milk); (iv) Eggs and egg products (To be declared as Egg); (v) Fish and fish products (To be declared as Fish); (vi) Peanuts, tree nuts (e.g. almonds, walnuts, pistachio, cashew nuts) and their products (To be declared as Nut); (vii) Soybeans and their products (To be declared as Soy); (viii) Sulphite in concentrations of 10mg/kg or more (To be declared as sulphite) 19 | Version-VIII (09.09.2025) Provided that in case presence of ingredients due to cross contamination which are known to cause allergy may be declared separately as May Contains.......................... (Name of allergy causing ingredients). 2[Provided further that this declaration is not required in case of oils and distilled alcoholic beverages derived from these ingredients and where the product itself is a food allergen.] Raw agricultural commodities are exempted from the allergen labelling requirements.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Known allergens from the supported ingredient screen are separately declared.",
+              "observed": {
+                "detected": [
+                  "oats",
+                  "soy"
+                ],
+                "missing": []
+              },
+              "requirement": "allergens",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "4(3), 4(5), 4(7)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 4,
+                  "passage_id": "LD-4",
+                  "quote": "(3) Pre-packaged food shall not be described or presented on any label or in any labelling in a manner that is false, misleading or deceptive or is likely to create an erroneous impression regarding its character in any respect; (4) Any information or pictorial device wri tten, printed, or graphic matter may be displayed on the label provided that it is not in conflict with the requirements of these regulations; (5) The particulars of declaration required under these Regulations to be specified on the label shall be in English or Hindi in Devnagri script: Provided that nothing herein contained shall prevent the use of any other language in addition to the language required under this regulation: Provided further that the information prov ided in such other language shall not contradict the information on the label in the English or Hindi; (6) Label on pre-packaged foods shall be applied in such a manner that it will not become separated from the container; (7) Contents on the label shall be clear, unambiguous, prominent, conspicuous, indelible and readily legible by the consumer under normal conditions of purchase and use;",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "English or Hindi is declared as a label language.",
+              "observed": {},
+              "requirement": "language",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(3)(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 10,
+                  "passage_id": "LD-5.3",
+                  "quote": "(b) Nutritional Information per 100g or 100ml or per single consumption pack of the product and per serve percentage (%) contribution to Recommended Dietary Allowance calculated on the basis of 2000kcal energy, 67 g total fat, 22 g saturated fat, 2 g trans fat, 50 g added sugar and 2000 mg of sodium (5 g salt) requirement for average adult per day, shall be given on the label containing the following: \u2014 (i) energy value (kcal); (ii) the amounts of (A) Protein (g); (B) Carbohydrate (g) and Total Sugars (g), added sugars (g); (C) Total fat (g), saturated fat (g), trans fat (other than naturally occurring trans fat)(g)and cholesterol (mg); Provided that the content of saturated fat and trans fat may be declared on the label as \u201cnot more than\u201d. 2[\u201cProvided that saturated fat and trans fat to be given only if total fat content is more than 0.5% in final food.\u201d] 2[\u201cProvided further that cholesterol content to be given only for products containing fats of animal origin and where total fat content is more than 0.5%.\u201d] 11 | Version-VIII (09.09.2025) (D) Sodium (mg); (iii) Wherever, numerical information on vitamins and minerals is declared, it shall be expressed in metric units; (iv) Nutrition information panel shall include the amount of food in gram (g) or millilitre (ml) for reference beside the serving measure and the number of servings in the package. Explanation: \u201cserving or serve size\u201d means an amount of food customarily consumed per eating occasion or as defined on the label which is expressed in metric unit. Additionally, it may also be given in common household measures like tea spoon, table spoon, cup that is appropriate to the food. Provided that the food claimed to be enriched with nutrients, such as, minerals, proteins, vitamins, amino acids or enzymes shall give the quantities of such added nutrients on the label.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                },
+                {
+                  "clause": "5(3)",
+                  "document": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+                  "page": 4,
+                  "passage_id": "AC-5.3",
+                  "quote": "[(3) When a nutrient content or any synonymous claim is made for the nutrients indicated in Schedule -I, it shall be made in accordance with the conditions specified in the said Schedule, provided flexibility in the wording of a nutrition claim is as per Schedule-II, or the use of any other word, if they are in accordance with conditions specified in Schedule-I and the meaning of the claim is not altered.]",
+                  "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf"
+                },
+                {
+                  "clause": "Schedule I, item 11 (Protein)",
+                  "document": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+                  "page": 9,
+                  "passage_id": "AC-PROTEIN",
+                  "quote": "11. Protein Source 10 per cent. of Recommended Dietary Allowance per 100 g for solids 5 per cent. of Recommended Dietary Allowance per 100 ml for liquids, or 5 per cent. of Recommended Dietary Allowance per 100 kcal, or 10 per cent. of Recommended Dietary Allowance per serving Rich / High 20 per cent. of Recommended Dietary Allowance per 100 g for solids 10 per cent. of Recommended Dietary Allowance per 100 ml for liquids, or 10 per cent. of Recommended Dietary Allowance per 100 kcal, or 20 per cent. of Recommended Dietary Allowance per serving",
+                  "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf"
+                },
+                {
+                  "clause": "2(1)(n)",
+                  "document": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+                  "page": 2,
+                  "passage_id": "AC-RDA",
+                  "quote": "(n) \u201crecommended dietary allowances\u201d means the average daily dietary nutrient intake level sufficient to meet the nutrient requirement of nearly all (97 to 98 per cent.) healthy individuals in a particular life stage and gender group. Explanations.- For the purposes of this clause , recommended dietary allowances values as provided in current Indian Council of Medical Research Nutrient Requirements and Recommended Dietary Allowances for Indians shall be applicable and if Indian recommended dietary allowances is not available for any nutrient then values provided in Codex or World Health Organization guidelines shall be applicable;",
+                  "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf"
+                }
+              ],
+              "explanation": "Declared protein is 6 g/100g. With the supplied 54 g/day RDA, compare >= 5.4 g/100g OR >= 2.7 g/100kcal OR >= 5.4 g/serving. At least one solid-food condition is met, conditional on the benchmark and substantiation.",
+              "observed": {
+                "protein_per_100g": 6.0,
+                "protein_per_100kcal": 1.5957446808510638,
+                "protein_per_serving": 2.4,
+                "qualifying_branches": [
+                  "per_100g"
+                ],
+                "rda_g": 54.0,
+                "rda_reference": "Illustrative benchmark supplied for arithmetic demonstration; the reviewer must replace this with the applicable current ICMR reference.",
+                "threshold_per_100g": 5.4,
+                "threshold_per_100kcal": 2.7,
+                "threshold_per_serving": 5.4
+              },
+              "requirement": "source_protein",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "4(3), 4(5), 4(7)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 4,
+                  "passage_id": "LD-4",
+                  "quote": "(3) Pre-packaged food shall not be described or presented on any label or in any labelling in a manner that is false, misleading or deceptive or is likely to create an erroneous impression regarding its character in any respect; (4) Any information or pictorial device wri tten, printed, or graphic matter may be displayed on the label provided that it is not in conflict with the requirements of these regulations; (5) The particulars of declaration required under these Regulations to be specified on the label shall be in English or Hindi in Devnagri script: Provided that nothing herein contained shall prevent the use of any other language in addition to the language required under this regulation: Provided further that the information prov ided in such other language shall not contradict the information on the label in the English or Hindi; (6) Label on pre-packaged foods shall be applied in such a manner that it will not become separated from the container; (7) Contents on the label shall be clear, unambiguous, prominent, conspicuous, indelible and readily legible by the consumer under normal conditions of purchase and use;",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "The declared category is outside the breakfast-cereal corpus.",
+              "observed": {
+                "issues": [
+                  "The declared category is outside the breakfast-cereal corpus."
+                ],
+                "unsupported_claims": []
+              },
+              "requirement": "scope_and_exemptions",
+              "status": "insufficient_evidence"
+            }
+          ],
+          "human_action": "A regulatory affairs professional must review the evidence and decide on printing.",
+          "limitations": [
+            "Findings cover the implemented checks for domestic retail processed breakfast cereals only.",
+            "Structured declarations are the proposed label data; artwork, font, symbol dimensions and placement are not inspected.",
+            "Licence authenticity, ingredient exemptions, manufacturing evidence and detailed Legal Metrology requirements need a professional check.",
+            "Claim arithmetic is conditional on the supplied RDA basis and declared values; laboratory substantiation is not validated."
+          ],
+          "mode": "stub",
+          "print_authorized": false,
+          "prompt_version": "v2",
+          "route": "regulatory-review",
+          "summary": "Human review required: evidence, scope or service reliability is incomplete.",
+          "verified": true
+        },
+        "usage": {
+          "prompt_tokens": 15334,
+          "completion_tokens": 259,
+          "cost": 0,
+          "model_calls": 7,
+          "usage_available": true,
+          "cost_complete": true,
+          "usage_kind": "synthetic_stub",
+          "cache_hit_cost": null
+        }
+      }
+    },
+    {
+      "example": "small-pack",
+      "submission": {
+        "run_id": "4c54e2d0-b280-4db8-a1c3-15d0d5aa6b31",
+        "status": "queued",
+        "status_url": "/v1/runs/4c54e2d0-b280-4db8-a1c3-15d0d5aa6b31",
+        "cached": false,
+        "correlation_id": "verify-small-pack"
+      },
+      "run": {
+        "run_id": "4c54e2d0-b280-4db8-a1c3-15d0d5aa6b31",
+        "status": "completed",
+        "submitted_at": 1793075263.1737688,
+        "updated_at": 1793075266.65071,
+        "latency_s": 3.4769413471221924,
+        "cached": false,
+        "correlation_id": "verify-small-pack",
+        "result": {
+          "corpus_version": "2d7cb65ae0918ad2f457654d66f6ee2e93ceb55d6aa223628e5f7d7a9bcec467",
+          "findings": [
+            {
+              "citations": [
+                {
+                  "clause": "5(1)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 5,
+                  "passage_id": "LD-5.1",
+                  "quote": "(1) The Name of Food: Every package of food shall carry name of the food which indicate the true nature of the food contained in the package, on the Front of Pack: (a) Where a food is specified by certain essential composition under Food Safety and Standards Regulations made under the Act, that establishes its identity the name provided therein shall be used; (b) In the absence of such name, either a common or usual name or an accompanying description of true nature of food shall be used; (c) It may additionally have a \u201ccoined\u201d, \u201cfanciful\u201d, \u201cbrand\u201d or \u201ctrade name\u201d subject to compliance of Food Safety & Standards (Advertising and Claims) Regulation 2018.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "A food name is declared.",
+              "observed": {},
+              "requirement": "food_name",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(2)(a)-(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 5,
+                  "passage_id": "LD-5.2",
+                  "quote": "(2) List of Ingredients : Except for single ingredient foods, a list of ingredients shall be declared on the label in the following manner:- (a) The list of ingredients shall contain an appropriate title , such as the term \u201cIngredients/List of Ingredients\u201d; (b) The name of ingredients used in the product shall be listed in descending order of their composition by weight or volume, as the case may be at the time of its manufacture;",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "An ingredient list is declared; composition and completeness require manufacturer confirmation.",
+              "observed": {},
+              "requirement": "ingredients",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(3)(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 10,
+                  "passage_id": "LD-5.3",
+                  "quote": "(b) Nutritional Information per 100g or 100ml or per single consumption pack of the product and per serve percentage (%) contribution to Recommended Dietary Allowance calculated on the basis of 2000kcal energy, 67 g total fat, 22 g saturated fat, 2 g trans fat, 50 g added sugar and 2000 mg of sodium (5 g salt) requirement for average adult per day, shall be given on the label containing the following: \u2014 (i) energy value (kcal); (ii) the amounts of (A) Protein (g); (B) Carbohydrate (g) and Total Sugars (g), added sugars (g); (C) Total fat (g), saturated fat (g), trans fat (other than naturally occurring trans fat)(g)and cholesterol (mg); Provided that the content of saturated fat and trans fat may be declared on the label as \u201cnot more than\u201d. 2[\u201cProvided that saturated fat and trans fat to be given only if total fat content is more than 0.5% in final food.\u201d] 2[\u201cProvided further that cholesterol content to be given only for products containing fats of animal origin and where total fat content is more than 0.5%.\u201d] 11 | Version-VIII (09.09.2025) (D) Sodium (mg); (iii) Wherever, numerical information on vitamins and minerals is declared, it shall be expressed in metric units; (iv) Nutrition information panel shall include the amount of food in gram (g) or millilitre (ml) for reference beside the serving measure and the number of servings in the package. Explanation: \u201cserving or serve size\u201d means an amount of food customarily consumed per eating occasion or as defined on the label which is expressed in metric unit. Additionally, it may also be given in common household measures like tea spoon, table spoon, cup that is appropriate to the food. Provided that the food claimed to be enriched with nutrients, such as, minerals, proteins, vitamins, amino acids or enzymes shall give the quantities of such added nutrients on the label.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Required numeric declarations are present in the supported panel.",
+              "observed": {
+                "basis": "per_100g",
+                "missing_fields": []
+              },
+              "requirement": "nutrition_panel",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(4)(a)-(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 13,
+                  "passage_id": "LD-5.4",
+                  "quote": "(4) Declaration regarding Veg or Non veg.- (a) Every package of Non-Vegetarian Food containing ingredients including food additives, processing aids of animal origin shall bear a declaration to this effect made by a symbol and colour code as stipulated below. The symbol shall consist of a brown colour filled triangle inside a square with brown outline having the sides not less than the minimum size specified in the Table m entioned in the regulation 5 (4) (c), as indicated below: Brown colour Provided where any article of food contains egg only as Non -Vegetarian ingredient, the manufacturer, or packer or seller may give declaration to this effect in addition to the said symbol. 14 | Version-VIII (09.09.2025) (b) Every package of Vegetarian Food containing ingredients including food additives, processing aids of plant origin shall bear a declaration to this effect by a symbol and colour code as stipulated below. The symbol shall consist of a green colour filled circle inside a square with green outline having the diameter not less than the minimum size specified in the Table mentioned in the regulation 5 (4) (c), as indicated below: Green colour",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "The declared mark agrees with the supported ingredient screen; artwork requires inspection.",
+              "observed": {},
+              "requirement": "veg_mark",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(6)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 15,
+                  "passage_id": "LD-5.6",
+                  "quote": "(6) Declaration of name and complete address.- (a) The name and complete address of the brand owner, whether or not, he himself is the manufacturer, m arketer, packer or bottler, as the case may be, shall be declared on the label. Such name and address shall be preceded by the qualifying words \u201cManufactured by (Mfg by, Mfd by)\u201d or \u201cMarketed by (Mkt by)\u201d or \u201cManufactured & Marketed by\u201d or \u201cPacked & Marketed by\u201d as the case may be. In case of alcoholic beverages , \u201cBottled by\u201d or \u201cBlended and Bottled by \u201cor \u201cImported and Bottled by\u201d. Or \u201cdistilled and bottled by\u201d may also be declared on label. (b) Where an article of food is imported into India, the package of food shall also carry the name and complete address of the importer in India. Provided further that where any food article manufactured outside India is packaged or bottled in India, the package containing such food article shall also bear on the label, the name of the country of origin of the food article and the name and complete address of the importer and the premises of packing or bottling in India.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Brand-owner name and address are declared.",
+              "observed": {},
+              "requirement": "brand_owner",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(7)(a)-(c)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 15,
+                  "passage_id": "LD-5.7",
+                  "quote": "(7) FSSAI logo and license number.- (a) The FSSAI logo and license number under the Act shall be di splayed on the label of the food package in contrast color to the background as below: 16 | Version-VIII (09.09.2025) Lic. No. XXXXXXXXXXXXXX (b) The FSSAI logo and license number of the brand owner shall be displayed on the label. In addition, the license number of the manufacturer or marketer or packer or bottler, as the case may be, if different from the brand owner, shall also be displayed on the label. (c) In case of imported food products, the importer shall display FSSAI logo and license number along with name and address of importer.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "FSSAI logo and a 14-digit licence declaration are present; authenticity is not checked.",
+              "observed": {},
+              "requirement": "fssai_declaration",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(8)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 16,
+                  "passage_id": "LD-5.8",
+                  "quote": "(8) Net quantity, Retail Sale Price and Consumer Care details.- Declaration and manner of declaration of Net quantity , Retail Sale Price and Consumer Care details shall be as provided in Legal Metrology Act, 2009 (1 of 2010) and the Rules made there under.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Net quantity, price and consumer care are declared. Detailed Legal Metrology compliance remains outside the corpus.",
+              "observed": {},
+              "requirement": "quantity_price_care_presence",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(9)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 16,
+                  "passage_id": "LD-5.9",
+                  "quote": "(9) Lot/Code/Batch identification.- A batch number or code number or lot number shall be declared on the label.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Batch identification is declared.",
+              "observed": {},
+              "requirement": "batch",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(10)(a)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 16,
+                  "passage_id": "LD-5.10",
+                  "quote": "(10) Date Marking.- (a) \u201cDate of manufacture or packaging\u201d and \u201cExpiry/Use by\u201d shall be declared on the label. However, expression \u201cBest before\u201d may also be used as optional or additional information.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Manufacture and expiry/use-by dates are declared.",
+              "observed": {},
+              "requirement": "dates",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(14)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 18,
+                  "passage_id": "LD-5.14",
+                  "quote": "(14) Declaration regarding Food allergen: The following foods and ingredients which are known to cause allergy shall be declared separately as Contains............................ (Name of allergy causing ingredients) (i) Cereals containing gluten; i.e., wheat, rye, barley , oats, spelt or their hybridized strains and products of these (To be declared as name of the cereal); 2[except (a) wheat based glucose syrups including dextrose*; (b) wheat based maltodextrins*; (c) glucose syrups based on barley; (d) cereals used for making alcoholic distillates including ethyl alcohol of agricultural origin; Note: * The products thereof, provided these ingredients have been assessed as safe and gluten shall not be more than 20 mg/kg.] (ii) Crustacean and their products (To be declared as Crustacean); (iii) Milk & Milk products (To be declared as Milk); (iv) Eggs and egg products (To be declared as Egg); (v) Fish and fish products (To be declared as Fish); (vi) Peanuts, tree nuts (e.g. almonds, walnuts, pistachio, cashew nuts) and their products (To be declared as Nut); (vii) Soybeans and their products (To be declared as Soy); (viii) Sulphite in concentrations of 10mg/kg or more (To be declared as sulphite) 19 | Version-VIII (09.09.2025) Provided that in case presence of ingredients due to cross contamination which are known to cause allergy may be declared separately as May Contains.......................... (Name of allergy causing ingredients). 2[Provided further that this declaration is not required in case of oils and distilled alcoholic beverages derived from these ingredients and where the product itself is a food allergen.] Raw agricultural commodities are exempted from the allergen labelling requirements.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "Known allergens from the supported ingredient screen are separately declared.",
+              "observed": {
+                "detected": [
+                  "oats",
+                  "soy"
+                ],
+                "missing": []
+              },
+              "requirement": "allergens",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "4(3), 4(5), 4(7)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 4,
+                  "passage_id": "LD-4",
+                  "quote": "(3) Pre-packaged food shall not be described or presented on any label or in any labelling in a manner that is false, misleading or deceptive or is likely to create an erroneous impression regarding its character in any respect; (4) Any information or pictorial device wri tten, printed, or graphic matter may be displayed on the label provided that it is not in conflict with the requirements of these regulations; (5) The particulars of declaration required under these Regulations to be specified on the label shall be in English or Hindi in Devnagri script: Provided that nothing herein contained shall prevent the use of any other language in addition to the language required under this regulation: Provided further that the information prov ided in such other language shall not contradict the information on the label in the English or Hindi; (6) Label on pre-packaged foods shall be applied in such a manner that it will not become separated from the container; (7) Contents on the label shall be clear, unambiguous, prominent, conspicuous, indelible and readily legible by the consumer under normal conditions of purchase and use;",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "English or Hindi is declared as a label language.",
+              "observed": {},
+              "requirement": "language",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "5(3)(b)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 10,
+                  "passage_id": "LD-5.3",
+                  "quote": "(b) Nutritional Information per 100g or 100ml or per single consumption pack of the product and per serve percentage (%) contribution to Recommended Dietary Allowance calculated on the basis of 2000kcal energy, 67 g total fat, 22 g saturated fat, 2 g trans fat, 50 g added sugar and 2000 mg of sodium (5 g salt) requirement for average adult per day, shall be given on the label containing the following: \u2014 (i) energy value (kcal); (ii) the amounts of (A) Protein (g); (B) Carbohydrate (g) and Total Sugars (g), added sugars (g); (C) Total fat (g), saturated fat (g), trans fat (other than naturally occurring trans fat)(g)and cholesterol (mg); Provided that the content of saturated fat and trans fat may be declared on the label as \u201cnot more than\u201d. 2[\u201cProvided that saturated fat and trans fat to be given only if total fat content is more than 0.5% in final food.\u201d] 2[\u201cProvided further that cholesterol content to be given only for products containing fats of animal origin and where total fat content is more than 0.5%.\u201d] 11 | Version-VIII (09.09.2025) (D) Sodium (mg); (iii) Wherever, numerical information on vitamins and minerals is declared, it shall be expressed in metric units; (iv) Nutrition information panel shall include the amount of food in gram (g) or millilitre (ml) for reference beside the serving measure and the number of servings in the package. Explanation: \u201cserving or serve size\u201d means an amount of food customarily consumed per eating occasion or as defined on the label which is expressed in metric unit. Additionally, it may also be given in common household measures like tea spoon, table spoon, cup that is appropriate to the food. Provided that the food claimed to be enriched with nutrients, such as, minerals, proteins, vitamins, amino acids or enzymes shall give the quantities of such added nutrients on the label.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                },
+                {
+                  "clause": "5(3)",
+                  "document": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+                  "page": 4,
+                  "passage_id": "AC-5.3",
+                  "quote": "[(3) When a nutrient content or any synonymous claim is made for the nutrients indicated in Schedule -I, it shall be made in accordance with the conditions specified in the said Schedule, provided flexibility in the wording of a nutrition claim is as per Schedule-II, or the use of any other word, if they are in accordance with conditions specified in Schedule-I and the meaning of the claim is not altered.]",
+                  "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf"
+                },
+                {
+                  "clause": "Schedule I, item 11 (Protein)",
+                  "document": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+                  "page": 9,
+                  "passage_id": "AC-PROTEIN",
+                  "quote": "11. Protein Source 10 per cent. of Recommended Dietary Allowance per 100 g for solids 5 per cent. of Recommended Dietary Allowance per 100 ml for liquids, or 5 per cent. of Recommended Dietary Allowance per 100 kcal, or 10 per cent. of Recommended Dietary Allowance per serving Rich / High 20 per cent. of Recommended Dietary Allowance per 100 g for solids 10 per cent. of Recommended Dietary Allowance per 100 ml for liquids, or 10 per cent. of Recommended Dietary Allowance per 100 kcal, or 20 per cent. of Recommended Dietary Allowance per serving",
+                  "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf"
+                },
+                {
+                  "clause": "2(1)(n)",
+                  "document": "Food Safety and Standards (Advertising and Claims) Regulations, 2018",
+                  "page": 2,
+                  "passage_id": "AC-RDA",
+                  "quote": "(n) \u201crecommended dietary allowances\u201d means the average daily dietary nutrient intake level sufficient to meet the nutrient requirement of nearly all (97 to 98 per cent.) healthy individuals in a particular life stage and gender group. Explanations.- For the purposes of this clause , recommended dietary allowances values as provided in current Indian Council of Medical Research Nutrient Requirements and Recommended Dietary Allowances for Indians shall be applicable and if Indian recommended dietary allowances is not available for any nutrient then values provided in Codex or World Health Organization guidelines shall be applicable;",
+                  "sha256": "4bfe17ba6fe59a3a8ffc7326ad723014b19d69b68cebffdc68717cdfff5cb191",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf"
+                }
+              ],
+              "explanation": "Declared protein is 6 g/100g. With the supplied 54 g/day RDA, compare >= 5.4 g/100g OR >= 2.7 g/100kcal OR >= 5.4 g/serving. At least one solid-food condition is met, conditional on the benchmark and substantiation.",
+              "observed": {
+                "protein_per_100g": 6.0,
+                "protein_per_100kcal": 1.5957446808510638,
+                "protein_per_serving": 2.4,
+                "qualifying_branches": [
+                  "per_100g"
+                ],
+                "rda_g": 54.0,
+                "rda_reference": "Illustrative benchmark supplied for arithmetic demonstration; the reviewer must replace this with the applicable current ICMR reference.",
+                "threshold_per_100g": 5.4,
+                "threshold_per_100kcal": 2.7,
+                "threshold_per_serving": 5.4
+              },
+              "requirement": "source_protein",
+              "status": "met"
+            },
+            {
+              "citations": [
+                {
+                  "clause": "8(1)-(3)",
+                  "document": "Food Safety and Standards (Labelling and Display) Regulations, 2020",
+                  "page": 21,
+                  "passage_id": "LD-8",
+                  "quote": "8. Exemptions from certain labelling requirements- (1) Where the surface area of the package is not more than 100 square centimetres, the label of such package shall be exempted from the requirements of list of ingredients, Lot Number or Batch Number or Code Number, nutritional information, labelling of irradiated food, declaration of food additives, License no and logo the name and complete address of the importer and instructions for use, but these information shall be given on the multi-unit packages. 2[(1) (a) The 'date of manufacture' and \u2018Use by Date or Expiry Date\u2019 may not be required to be mentioned on the package having surface area of less than thirty square centimetres but this information shall be given on the multi-unit packages.] 22 | Version-VIII (09.09.2025) (2) In case of liquid products marketed in bottles, if such bottle is intended to be reused for refilling, the requirement of list of ingredients shall be exempted, but the nutritional information s pecified in regulation 5(3) shall be given on the label. (3) In case of food with shelf -life of not more than seven days, the 'date of manufacture' may not be required to be mentioned on the label of packaged food articles, but the 'Expiry/use by' shall be mentioned on the label by the manufacturer or packer.",
+                  "sha256": "0d0af8f6e6a6f4b96618624bed5089400f2f268eb4c46e826ebee6aaead7a71e",
+                  "source_url": "https://www.fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VIII_09_09_2025.pdf"
+                }
+              ],
+              "explanation": "A small-package or product exemption may apply; professional interpretation is required.",
+              "observed": {
+                "issues": [
+                  "A small-package or product exemption may apply; professional interpretation is required."
+                ],
+                "unsupported_claims": []
+              },
+              "requirement": "scope_and_exemptions",
+              "status": "insufficient_evidence"
+            }
+          ],
+          "human_action": "A regulatory affairs professional must review the evidence and decide on printing.",
+          "limitations": [
+            "Findings cover the implemented checks for domestic retail processed breakfast cereals only.",
+            "Structured declarations are the proposed label data; artwork, font, symbol dimensions and placement are not inspected.",
+            "Licence authenticity, ingredient exemptions, manufacturing evidence and detailed Legal Metrology requirements need a professional check.",
+            "Claim arithmetic is conditional on the supplied RDA basis and declared values; laboratory substantiation is not validated."
+          ],
+          "mode": "stub",
+          "print_authorized": false,
+          "prompt_version": "v2",
+          "route": "regulatory-review",
+          "summary": "Human review required: evidence, scope or service reliability is incomplete.",
+          "verified": true
+        },
+        "usage": {
+          "prompt_tokens": 18937,
+          "completion_tokens": 295,
+          "cost": 0,
+          "model_calls": 8,
+          "usage_available": true,
+          "cost_complete": true,
+          "usage_kind": "synthetic_stub",
+          "cache_hit_cost": null
+        }
+      }
+    },
+    {
+      "example": "malformed",
+      "rejection": {
+        "detail": [
+          {
+            "loc": [
+              "body",
+              "nutrition",
+              "protein_g"
+            ],
+            "msg": "Input should be greater than or equal to 0",
+            "type": "greater_than_equal"
+          }
+        ],
+        "quarantine_id": "55675688-5f88-4fca-b8a1-8ef1af6f2461",
+        "agent_started": false,
+        "correlation_id": "3d8aa921-1258-47c7-a042-1c0a1c84870d"
+      },
+      "run_counts_unchanged": true
+    },
+    {
+      "example": "prompt-injection",
+      "rejection": {
+        "detail": [
+          {
+            "loc": [
+              "body",
+              "free_text"
+            ],
+            "msg": "Potential prompt injection in free text; remove instructions directed at the system.",
+            "type": "guardrail"
+          }
+        ],
+        "quarantine_id": "ebc21b77-a7fb-4705-9f60-ad6f1b91f997",
+        "agent_started": false
+      },
+      "run_counts_unchanged": true
+    }
+  ],
+  "feedback_saved": true
+}

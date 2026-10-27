@@ -1,0 +1,2851 @@
+{
+  "data": [
+    {
+      "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+      "spans": [
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "3998dfb74a4bbff3",
+          "operationName": "fastapi.endpoint",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "77333b209345fcea"
+            }
+          ],
+          "startTime": 1793075252421160,
+          "duration": 351643,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "3841616d13bd38d4",
+          "operationName": "fastapi.serialization",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "81507bb7c203181f"
+            }
+          ],
+          "startTime": 1793075251984372,
+          "duration": 66,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "4a31c6f794ef8bf9",
+          "operationName": "research.execute_tool",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075251590087,
+          "duration": 26184,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "1b5dd6a83b7c0df1",
+          "operationName": "POST /plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "87e321587183e7e9"
+            }
+          ],
+          "startTime": 1793075252025723,
+          "duration": 352405,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "POST"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "provider-stub"
+            },
+            {
+              "key": "server.port",
+              "type": "int64",
+              "value": 8010
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "url.path",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "url.scheme",
+              "type": "string",
+              "value": "http"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "f2954cd416af5b49",
+          "operationName": "POST /plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "7dc0567a97be620d"
+            }
+          ],
+          "startTime": 1793075251203094,
+          "duration": 353478,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "POST"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "provider-stub"
+            },
+            {
+              "key": "server.port",
+              "type": "int64",
+              "value": 8010
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "url.path",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "url.scheme",
+              "type": "string",
+              "value": "http"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "87e321587183e7e9",
+          "operationName": "research.plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075252024105,
+          "duration": 373066,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "b03c562e645de36b",
+          "operationName": "POST /plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "f40e89cf85f16f22"
+            }
+          ],
+          "startTime": 1793075253213940,
+          "duration": 353104,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "POST"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "provider-stub"
+            },
+            {
+              "key": "server.port",
+              "type": "int64",
+              "value": 8010
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "url.path",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "url.scheme",
+              "type": "string",
+              "value": "http"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "3eb0a7f6c4424b33",
+          "operationName": "fastapi.dependencies",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "6e89d16cb8e5cbda"
+            }
+          ],
+          "startTime": 1793075252822996,
+          "duration": 63,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "413db260a63ebd73",
+          "operationName": "stub.planning_delay",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "c0507f93792c32ec"
+            }
+          ],
+          "startTime": 1793075251632830,
+          "duration": 350891,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "7dc0567a97be620d",
+          "operationName": "research.plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075251200922,
+          "duration": 377381,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "f40e89cf85f16f22",
+          "operationName": "research.plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075253212392,
+          "duration": 372579,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "738b6fab49f5b6b6",
+          "operationName": "POST /v1/runs",
+          "references": [],
+          "startTime": 1793075250467068,
+          "duration": 178734,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "POST"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 202
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/v1/runs"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "server.port",
+              "type": "int64",
+              "value": 8000
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "url.path",
+              "type": "string",
+              "value": "/v1/runs"
+            },
+            {
+              "key": "url.scheme",
+              "type": "string",
+              "value": "http"
+            }
+          ],
+          "logs": [],
+          "processID": "p3",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "754940b81b212632",
+          "operationName": "fastapi.dependencies",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "0bf67f21bee84d45"
+            }
+          ],
+          "startTime": 1793075250494051,
+          "duration": 1001,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.api.submit"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p3",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "96cf1de3b964d23d",
+          "operationName": "fastapi.endpoint",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "0bf67f21bee84d45"
+            }
+          ],
+          "startTime": 1793075250495588,
+          "duration": 148100,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.api.submit"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p3",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "0bf67f21bee84d45",
+          "operationName": "POST /v1/runs",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "738b6fab49f5b6b6"
+            }
+          ],
+          "startTime": 1793075250491565,
+          "duration": 152960,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p3",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "2ea39dabfe3c77f0",
+          "operationName": "research.execute_tool",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075251167201,
+          "duration": 11525,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "015f241497a75eda",
+          "operationName": "fastapi.dependencies",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "1b5dd6a83b7c0df1"
+            }
+          ],
+          "startTime": 1793075252025915,
+          "duration": 66,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "f718dada2501170a",
+          "operationName": "fastapi.dependencies",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "77333b209345fcea"
+            }
+          ],
+          "startTime": 1793075252420636,
+          "duration": 70,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "757c1e3640afb6b2",
+          "operationName": "stub.planning_delay",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "7611b140558fb723"
+            }
+          ],
+          "startTime": 1793075250766714,
+          "duration": 351432,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "c8beca3f3ffa3dbd",
+          "operationName": "research.execute_tool",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075252403976,
+          "duration": 7067,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "6e89d16cb8e5cbda",
+          "operationName": "POST /plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b9617fca8c62079a"
+            }
+          ],
+          "startTime": 1793075252822801,
+          "duration": 352760,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "POST"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "provider-stub"
+            },
+            {
+              "key": "server.port",
+              "type": "int64",
+              "value": 8010
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "url.path",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "url.scheme",
+              "type": "string",
+              "value": "http"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "a27b7d01e3356e33",
+          "operationName": "fastapi.dependencies",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "f2954cd416af5b49"
+            }
+          ],
+          "startTime": 1793075251203322,
+          "duration": 75,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "4a8225c3eab44046",
+          "operationName": "fastapi.endpoint",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "5dedbd90942e9d1f"
+            }
+          ],
+          "startTime": 1793075250765947,
+          "duration": 352660,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "aa686a0dbbf0974a",
+          "operationName": "fastapi.serialization",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "5dedbd90942e9d1f"
+            }
+          ],
+          "startTime": 1793075251118841,
+          "duration": 80,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "ab6758e6b28c8be9",
+          "operationName": "fastapi.endpoint",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "f2954cd416af5b49"
+            }
+          ],
+          "startTime": 1793075251203502,
+          "duration": 351906,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "aa5fc6a2740f9717",
+          "operationName": "fastapi.serialization",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "f2954cd416af5b49"
+            }
+          ],
+          "startTime": 1793075251555669,
+          "duration": 141,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "57d7cd8a38c356fe",
+          "operationName": "fastapi.serialization",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "77333b209345fcea"
+            }
+          ],
+          "startTime": 1793075252772919,
+          "duration": 43,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "4f88b9c6f8675bae",
+          "operationName": "research.plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075252418788,
+          "duration": 373810,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "b9d6a5a074234981",
+          "operationName": "stub.planning_delay",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "7dc0567a97be620d"
+            }
+          ],
+          "startTime": 1793075251203996,
+          "duration": 350964,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "c0507f93792c32ec",
+          "operationName": "research.plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075251629921,
+          "duration": 366941,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "b9617fca8c62079a",
+          "operationName": "research.plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075252821257,
+          "duration": 367836,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "8f68e79a26618656",
+          "operationName": "fastapi.dependencies",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "5dedbd90942e9d1f"
+            }
+          ],
+          "startTime": 1793075250765750,
+          "duration": 90,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "44629e9120b42548",
+          "operationName": "verification.independent_check",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "2432d72efa676ef9"
+            }
+          ],
+          "startTime": 1793075253650112,
+          "duration": 21285,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p4",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "5dedbd90942e9d1f",
+          "operationName": "POST /plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "7611b140558fb723"
+            }
+          ],
+          "startTime": 1793075250764755,
+          "duration": 355128,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "POST"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "provider-stub"
+            },
+            {
+              "key": "server.port",
+              "type": "int64",
+              "value": 8010
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "url.path",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "url.scheme",
+              "type": "string",
+              "value": "http"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "29dcfe7c56309c1a",
+          "operationName": "research.execute_tool",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075252007184,
+          "duration": 6862,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "0ff044ae4f34c30f",
+          "operationName": "research.execute_tool",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075252802895,
+          "duration": 8013,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "b5eea08dc73180bf",
+          "operationName": "fastapi.endpoint",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b03c562e645de36b"
+            }
+          ],
+          "startTime": 1793075253214296,
+          "duration": 351818,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "f2fcabc16fee82ea",
+          "operationName": "fastapi.endpoint",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "81507bb7c203181f"
+            }
+          ],
+          "startTime": 1793075251632452,
+          "duration": 351743,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "77333b209345fcea",
+          "operationName": "POST /plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "4f88b9c6f8675bae"
+            }
+          ],
+          "startTime": 1793075252420417,
+          "duration": 353126,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "POST"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "provider-stub"
+            },
+            {
+              "key": "server.port",
+              "type": "int64",
+              "value": 8010
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "url.path",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "url.scheme",
+              "type": "string",
+              "value": "http"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "5bf75f43a007dc68",
+          "operationName": "fastapi.serialization",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "0bf67f21bee84d45"
+            }
+          ],
+          "startTime": 1793075250644224,
+          "duration": 58,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.api.submit"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p3",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "59258f33076253b6",
+          "operationName": "research.execute_tool",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075253196946,
+          "duration": 7753,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "4889c43954b26f2c",
+          "operationName": "stub.planning_delay",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b9617fca8c62079a"
+            }
+          ],
+          "startTime": 1793075252823414,
+          "duration": 350965,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "7611b140558fb723",
+          "operationName": "research.plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075250708685,
+          "duration": 442544,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "b1506f090276ffdd",
+          "operationName": "research.task",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "96cf1de3b964d23d"
+            }
+          ],
+          "startTime": 1793075250680293,
+          "duration": 2920112,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "b052f968d49e8a48",
+          "operationName": "stub.planning_delay",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "f40e89cf85f16f22"
+            }
+          ],
+          "startTime": 1793075253214689,
+          "duration": 351053,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "7cd9e16441839311",
+          "operationName": "fastapi.dependencies",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b03c562e645de36b"
+            }
+          ],
+          "startTime": 1793075253214146,
+          "duration": 66,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "e3baca4175f58224",
+          "operationName": "fastapi.dependencies",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "81507bb7c203181f"
+            }
+          ],
+          "startTime": 1793075251632310,
+          "duration": 63,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "5b58e2941cf21a28",
+          "operationName": "fastapi.serialization",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "1b5dd6a83b7c0df1"
+            }
+          ],
+          "startTime": 1793075252377572,
+          "duration": 40,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "7d0e4a694897d7a1",
+          "operationName": "stub.planning_delay",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "4f88b9c6f8675bae"
+            }
+          ],
+          "startTime": 1793075252421710,
+          "duration": 350791,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "2432d72efa676ef9",
+          "operationName": "verification.task",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b1506f090276ffdd"
+            }
+          ],
+          "startTime": 1793075253636558,
+          "duration": 62019,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p4",
+          "warnings": [
+            "clock skew adjustment disabled; not applying calculated delta of -1.527217877s"
+          ]
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "a291aaaae2d76068",
+          "operationName": "fastapi.serialization",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "6e89d16cb8e5cbda"
+            }
+          ],
+          "startTime": 1793075253174893,
+          "duration": 42,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "81507bb7c203181f",
+          "operationName": "POST /plan",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "c0507f93792c32ec"
+            }
+          ],
+          "startTime": 1793075251632112,
+          "duration": 352997,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "POST"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "provider-stub"
+            },
+            {
+              "key": "server.port",
+              "type": "int64",
+              "value": 8010
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "url.path",
+              "type": "string",
+              "value": "/plan"
+            },
+            {
+              "key": "url.scheme",
+              "type": "string",
+              "value": "http"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "33dc689023231692",
+          "operationName": "stub.planning_delay",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "87e321587183e7e9"
+            }
+          ],
+          "startTime": 1793075252026572,
+          "duration": 350581,
+          "tags": [
+            {
+              "key": "correlation.id",
+              "type": "string",
+              "value": "verify-valid-protein"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "labelguard"
+            },
+            {
+              "key": "run.id",
+              "type": "string",
+              "value": "7f3d9110-b774-4792-956d-701e60438009"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "acac4200c8e376ab",
+          "operationName": "fastapi.endpoint",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "6e89d16cb8e5cbda"
+            }
+          ],
+          "startTime": 1793075252823148,
+          "duration": 351621,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "d7812d70ff2baabf",
+          "operationName": "fastapi.serialization",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "b03c562e645de36b"
+            }
+          ],
+          "startTime": 1793075253566254,
+          "duration": 79,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+          "spanID": "b42aed1f09508f02",
+          "operationName": "fastapi.endpoint",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "79c6aa8ea12bc14ba035f3b0aec7c371",
+              "spanID": "1b5dd6a83b7c0df1"
+            }
+          ],
+          "startTime": 1793075252026065,
+          "duration": 351391,
+          "tags": [
+            {
+              "key": "code.function.name",
+              "type": "string",
+              "value": "labelguard.stub.plan"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "fastapi"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.162.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "labelguard-provider-stub",
+          "tags": [
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "7"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.45.1"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "labelguard-research",
+          "tags": [
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "7"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.45.1"
+            }
+          ]
+        },
+        "p3": {
+          "serviceName": "labelguard-api",
+          "tags": [
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "7"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.45.1"
+            }
+          ]
+        },
+        "p4": {
+          "serviceName": "labelguard-verification",
+          "tags": [
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "7"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.45.1"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    }
+  ],
+  "total": 0,
+  "limit": 0,
+  "offset": 0,
+  "errors": null
+}
