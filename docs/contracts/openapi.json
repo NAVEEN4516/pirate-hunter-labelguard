@@ -1,0 +1,1006 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Pirate Hunter | LabelGuard",
+    "description": "Asynchronous advisory compliance findings for domestic packaged breakfast cereals. print_authorized is always false. Local academic deployment; do not expose publicly without authentication.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ready": {
+      "get": {
+        "summary": "Ready",
+        "operationId": "ready_ready_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/metrics": {
+      "get": {
+        "summary": "Metrics",
+        "operationId": "metrics_metrics_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/contract": {
+      "get": {
+        "summary": "Contract",
+        "operationId": "contract_v1_contract_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/info": {
+      "get": {
+        "summary": "Info",
+        "operationId": "info_v1_info_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/examples/{name}": {
+      "get": {
+        "summary": "Example",
+        "operationId": "example_v1_examples__name__get",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Name"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/corpus": {
+      "get": {
+        "summary": "Corpus",
+        "operationId": "corpus_v1_corpus_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/passages/{passage_id}": {
+      "get": {
+        "summary": "Passage",
+        "operationId": "passage_v1_passages__passage_id__get",
+        "parameters": [
+          {
+            "name": "passage_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Passage Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs": {
+      "post": {
+        "summary": "Submit",
+        "operationId": "submit_v1_runs_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LabelRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{run_id}": {
+      "get": {
+        "summary": "Run Status",
+        "operationId": "run_status_v1_runs__run_id__get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{run_id}/trace": {
+      "get": {
+        "summary": "Run Trace",
+        "operationId": "run_trace_v1_runs__run_id__trace_get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{run_id}/feedback": {
+      "post": {
+        "summary": "Feedback",
+        "operationId": "feedback_v1_runs__run_id__feedback_post",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feedback"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/dashboard": {
+      "get": {
+        "summary": "Dashboard",
+        "operationId": "dashboard_v1_dashboard_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/quarantine/{quarantine_id}": {
+      "get": {
+        "summary": "Quarantined",
+        "operationId": "quarantined_v1_quarantine__quarantine_id__get",
+        "parameters": [
+          {
+            "name": "quarantine_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Quarantine Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Category": {
+        "type": "string",
+        "enum": [
+          "breakfast_cereal",
+          "dairy",
+          "supplement",
+          "beverage",
+          "other"
+        ],
+        "title": "Category"
+      },
+      "Declarations": {
+        "properties": {
+          "food_name": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "Food Name",
+            "default": ""
+          },
+          "ingredients": {
+            "items": {
+              "$ref": "#/components/schemas/Ingredient"
+            },
+            "type": "array",
+            "maxItems": 60,
+            "title": "Ingredients",
+            "default": []
+          },
+          "allergens": {
+            "items": {
+              "type": "string",
+              "maxLength": 250
+            },
+            "type": "array",
+            "maxItems": 30,
+            "title": "Allergens",
+            "default": []
+          },
+          "veg_mark": {
+            "type": "string",
+            "enum": [
+              "veg",
+              "non_veg",
+              "missing"
+            ],
+            "title": "Veg Mark",
+            "default": "missing"
+          },
+          "animal_fat_present": {
+            "type": "boolean",
+            "title": "Animal Fat Present",
+            "default": false
+          },
+          "fssai_logo": {
+            "type": "boolean",
+            "title": "Fssai Logo",
+            "default": false
+          },
+          "licence_number": {
+            "type": "string",
+            "pattern": "^(\\d{14})?$",
+            "title": "Licence Number",
+            "default": ""
+          },
+          "brand_owner_name": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "Brand Owner Name",
+            "default": ""
+          },
+          "brand_owner_address": {
+            "type": "string",
+            "maxLength": 4000,
+            "title": "Brand Owner Address",
+            "default": ""
+          },
+          "manufacturer_same_as_owner": {
+            "type": "boolean",
+            "title": "Manufacturer Same As Owner",
+            "default": true
+          },
+          "manufacturer_name": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "Manufacturer Name",
+            "default": ""
+          },
+          "manufacturer_address": {
+            "type": "string",
+            "maxLength": 4000,
+            "title": "Manufacturer Address",
+            "default": ""
+          },
+          "manufacturer_licence": {
+            "type": "string",
+            "pattern": "^(\\d{14})?$",
+            "title": "Manufacturer Licence",
+            "default": ""
+          },
+          "batch_number": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "Batch Number",
+            "default": ""
+          },
+          "manufacture_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Manufacture Date"
+          },
+          "expiry_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expiry Date"
+          },
+          "net_quantity_declared": {
+            "type": "boolean",
+            "title": "Net Quantity Declared",
+            "default": false
+          },
+          "mrp_declared": {
+            "type": "boolean",
+            "title": "Mrp Declared",
+            "default": false
+          },
+          "consumer_care_declared": {
+            "type": "boolean",
+            "title": "Consumer Care Declared",
+            "default": false
+          },
+          "instructions_for_use": {
+            "type": "string",
+            "maxLength": 4000,
+            "title": "Instructions For Use",
+            "default": ""
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "en",
+              "hi",
+              "other"
+            ],
+            "title": "Language",
+            "default": "en"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Declarations"
+      },
+      "Feedback": {
+        "properties": {
+          "satisfactory": {
+            "type": "boolean",
+            "title": "Satisfactory"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 3,
+            "title": "Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "satisfactory",
+          "reason"
+        ],
+        "title": "Feedback"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Ingredient": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Name"
+          },
+          "percent": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Percent"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "Ingredient"
+      },
+      "LabelRequest": {
+        "properties": {
+          "contract_version": {
+            "type": "string",
+            "const": "1.0",
+            "title": "Contract Version",
+            "default": "1.0"
+          },
+          "product_name": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 2,
+            "title": "Product Name"
+          },
+          "category": {
+            "$ref": "#/components/schemas/Category"
+          },
+          "front_of_pack": {
+            "type": "string",
+            "maxLength": 4000,
+            "title": "Front Of Pack",
+            "default": ""
+          },
+          "other_label_text": {
+            "type": "string",
+            "maxLength": 4000,
+            "title": "Other Label Text",
+            "default": ""
+          },
+          "claims": {
+            "items": {
+              "type": "string",
+              "maxLength": 250
+            },
+            "type": "array",
+            "maxItems": 20,
+            "title": "Claims",
+            "default": []
+          },
+          "package": {
+            "$ref": "#/components/schemas/Package"
+          },
+          "declarations": {
+            "$ref": "#/components/schemas/Declarations"
+          },
+          "nutrition": {
+            "$ref": "#/components/schemas/Nutrition"
+          },
+          "rda_basis": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RDABasis"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "assessment_date": {
+            "type": "string",
+            "format": "date",
+            "title": "Assessment Date",
+            "default": "2026-10-27"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "product_name",
+          "category",
+          "package",
+          "declarations",
+          "nutrition"
+        ],
+        "title": "LabelRequest"
+      },
+      "Nutrition": {
+        "properties": {
+          "basis": {
+            "type": "string",
+            "enum": [
+              "per_100g",
+              "per_serving"
+            ],
+            "title": "Basis",
+            "default": "per_100g"
+          },
+          "energy_kcal": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 950.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Energy Kcal"
+          },
+          "protein_g": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Protein G"
+          },
+          "carbohydrate_g": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Carbohydrate G"
+          },
+          "total_sugars_g": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Sugars G"
+          },
+          "added_sugars_g": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Added Sugars G"
+          },
+          "total_fat_g": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Fat G"
+          },
+          "saturated_fat_g": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Saturated Fat G"
+          },
+          "trans_fat_g": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Trans Fat G"
+          },
+          "fibre_g": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fibre G"
+          },
+          "sodium_mg": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100000.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sodium Mg"
+          },
+          "cholesterol_mg": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100000.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cholesterol Mg"
+          },
+          "serving_size_g": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1000.0,
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Serving Size G"
+          },
+          "servings_per_pack": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1000.0,
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Servings Per Pack"
+          },
+          "rda_percent_declared": {
+            "type": "boolean",
+            "title": "Rda Percent Declared",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Nutrition"
+      },
+      "Package": {
+        "properties": {
+          "net_quantity_g": {
+            "type": "number",
+            "maximum": 50000.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Net Quantity G"
+          },
+          "surface_area_cm2": {
+            "type": "number",
+            "maximum": 100000.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Surface Area Cm2"
+          },
+          "retail": {
+            "type": "boolean",
+            "title": "Retail",
+            "default": true
+          },
+          "imported": {
+            "type": "boolean",
+            "title": "Imported",
+            "default": false
+          },
+          "single_ingredient_unprocessed": {
+            "type": "boolean",
+            "title": "Single Ingredient Unprocessed",
+            "default": false
+          },
+          "exemption_claimed": {
+            "type": "boolean",
+            "title": "Exemption Claimed",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "net_quantity_g",
+          "surface_area_cm2"
+        ],
+        "title": "Package"
+      },
+      "RDABasis": {
+        "properties": {
+          "protein_g_per_day": {
+            "type": "number",
+            "maximum": 200.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Protein G Per Day"
+          },
+          "reference": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 10,
+            "title": "Reference"
+          },
+          "target_population": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 3,
+            "title": "Target Population"
+          },
+          "confirmed_by_reviewer": {
+            "type": "boolean",
+            "title": "Confirmed By Reviewer",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "protein_g_per_day",
+          "reference",
+          "target_population"
+        ],
+        "title": "RDABasis"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

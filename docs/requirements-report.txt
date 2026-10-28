@@ -1,0 +1,2 @@
+# Optional document-authoring dependency; not needed by the application.
+reportlab>=4,<5

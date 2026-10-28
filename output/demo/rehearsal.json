@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-10-28T10:48:01.8691645Z",
+  "base_url": "http://localhost:8000",
+  "cases_passed": 6,
+  "records": [
+    {
+      "example": "valid-protein",
+      "run_id": "a2d7419b-7f12-4ba8-9726-9816f665f7b7",
+      "route": "clear-for-print",
+      "latency_s": 3.500746250152588,
+      "verified": true,
+      "print_authorized": false
+    },
+    {
+      "example": "insufficient-protein",
+      "run_id": "92a88d7c-4a43-456f-a207-f7ef49afa7a9",
+      "route": "revise-and-recheck",
+      "latency_s": 3.223569869995117,
+      "verified": true,
+      "print_authorized": false
+    },
+    {
+      "example": "out-of-scope",
+      "run_id": "891e69af-c039-499c-a29d-dd185fee914e",
+      "route": "regulatory-review",
+      "latency_s": 3.4675257205963135,
+      "verified": true,
+      "print_authorized": false
+    },
+    {
+      "example": "small-pack",
+      "run_id": "fd379e7a-0340-4584-8e2a-d6562ede67bf",
+      "route": "regulatory-review",
+      "latency_s": 3.6921236515045166,
+      "verified": true,
+      "print_authorized": false
+    },
+    {
+      "example": "malformed",
+      "http_status": 422,
+      "agent_started": false,
+      "quarantine_id": "6fee165a-0966-4911-a2d7-44dc2555e88e",
+      "run_counts_unchanged": true
+    },
+    {
+      "example": "prompt-injection",
+      "http_status": 422,
+      "agent_started": false,
+      "quarantine_id": "6a9aef55-317c-4fa0-a3f4-bf1a3e35a444",
+      "run_counts_unchanged": true
+    }
+  ]
+}

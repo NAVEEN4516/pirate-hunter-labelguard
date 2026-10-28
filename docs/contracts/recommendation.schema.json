@@ -1,0 +1,161 @@
+{
+  "$defs": {
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "passage_id": {
+          "title": "Passage Id",
+          "type": "string"
+        },
+        "document": {
+          "title": "Document",
+          "type": "string"
+        },
+        "clause": {
+          "title": "Clause",
+          "type": "string"
+        },
+        "page": {
+          "title": "Page",
+          "type": "integer"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        },
+        "quote": {
+          "title": "Quote",
+          "type": "string"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "passage_id",
+        "document",
+        "clause",
+        "page",
+        "source_url",
+        "quote",
+        "sha256"
+      ],
+      "title": "Citation",
+      "type": "object"
+    },
+    "Finding": {
+      "additionalProperties": false,
+      "properties": {
+        "requirement": {
+          "title": "Requirement",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "met",
+            "unmet",
+            "insufficient_evidence",
+            "not_applicable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        },
+        "citations": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "title": "Citations",
+          "type": "array"
+        },
+        "observed": {
+          "additionalProperties": true,
+          "default": {},
+          "title": "Observed",
+          "type": "object"
+        }
+      },
+      "required": [
+        "requirement",
+        "status",
+        "explanation"
+      ],
+      "title": "Finding",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "route": {
+      "enum": [
+        "clear-for-print",
+        "revise-and-recheck",
+        "regulatory-review"
+      ],
+      "title": "Route",
+      "type": "string"
+    },
+    "summary": {
+      "title": "Summary",
+      "type": "string"
+    },
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/Finding"
+      },
+      "title": "Findings",
+      "type": "array"
+    },
+    "print_authorized": {
+      "const": false,
+      "default": false,
+      "title": "Print Authorized",
+      "type": "boolean"
+    },
+    "human_action": {
+      "default": "A regulatory affairs professional must review the evidence and decide on printing.",
+      "title": "Human Action",
+      "type": "string"
+    },
+    "prompt_version": {
+      "title": "Prompt Version",
+      "type": "string"
+    },
+    "corpus_version": {
+      "title": "Corpus Version",
+      "type": "string"
+    },
+    "mode": {
+      "title": "Mode",
+      "type": "string"
+    },
+    "verified": {
+      "title": "Verified",
+      "type": "boolean"
+    },
+    "limitations": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "route",
+    "summary",
+    "findings",
+    "prompt_version",
+    "corpus_version",
+    "mode",
+    "verified"
+  ],
+  "title": "Recommendation",
+  "type": "object"
+}

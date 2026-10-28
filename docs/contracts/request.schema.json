@@ -1,0 +1,557 @@
+{
+  "$defs": {
+    "Category": {
+      "enum": [
+        "breakfast_cereal",
+        "dairy",
+        "supplement",
+        "beverage",
+        "other"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "Declarations": {
+      "additionalProperties": false,
+      "properties": {
+        "food_name": {
+          "default": "",
+          "maxLength": 250,
+          "title": "Food Name",
+          "type": "string"
+        },
+        "ingredients": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Ingredient"
+          },
+          "maxItems": 60,
+          "title": "Ingredients",
+          "type": "array"
+        },
+        "allergens": {
+          "default": [],
+          "items": {
+            "maxLength": 250,
+            "type": "string"
+          },
+          "maxItems": 30,
+          "title": "Allergens",
+          "type": "array"
+        },
+        "veg_mark": {
+          "default": "missing",
+          "enum": [
+            "veg",
+            "non_veg",
+            "missing"
+          ],
+          "title": "Veg Mark",
+          "type": "string"
+        },
+        "animal_fat_present": {
+          "default": false,
+          "title": "Animal Fat Present",
+          "type": "boolean"
+        },
+        "fssai_logo": {
+          "default": false,
+          "title": "Fssai Logo",
+          "type": "boolean"
+        },
+        "licence_number": {
+          "default": "",
+          "pattern": "^(\\d{14})?$",
+          "title": "Licence Number",
+          "type": "string"
+        },
+        "brand_owner_name": {
+          "default": "",
+          "maxLength": 250,
+          "title": "Brand Owner Name",
+          "type": "string"
+        },
+        "brand_owner_address": {
+          "default": "",
+          "maxLength": 4000,
+          "title": "Brand Owner Address",
+          "type": "string"
+        },
+        "manufacturer_same_as_owner": {
+          "default": true,
+          "title": "Manufacturer Same As Owner",
+          "type": "boolean"
+        },
+        "manufacturer_name": {
+          "default": "",
+          "maxLength": 250,
+          "title": "Manufacturer Name",
+          "type": "string"
+        },
+        "manufacturer_address": {
+          "default": "",
+          "maxLength": 4000,
+          "title": "Manufacturer Address",
+          "type": "string"
+        },
+        "manufacturer_licence": {
+          "default": "",
+          "pattern": "^(\\d{14})?$",
+          "title": "Manufacturer Licence",
+          "type": "string"
+        },
+        "batch_number": {
+          "default": "",
+          "maxLength": 250,
+          "title": "Batch Number",
+          "type": "string"
+        },
+        "manufacture_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Manufacture Date"
+        },
+        "expiry_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expiry Date"
+        },
+        "net_quantity_declared": {
+          "default": false,
+          "title": "Net Quantity Declared",
+          "type": "boolean"
+        },
+        "mrp_declared": {
+          "default": false,
+          "title": "Mrp Declared",
+          "type": "boolean"
+        },
+        "consumer_care_declared": {
+          "default": false,
+          "title": "Consumer Care Declared",
+          "type": "boolean"
+        },
+        "instructions_for_use": {
+          "default": "",
+          "maxLength": 4000,
+          "title": "Instructions For Use",
+          "type": "string"
+        },
+        "language": {
+          "default": "en",
+          "enum": [
+            "en",
+            "hi",
+            "other"
+          ],
+          "title": "Language",
+          "type": "string"
+        }
+      },
+      "title": "Declarations",
+      "type": "object"
+    },
+    "Ingredient": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "percent": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "maximum": 100,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Percent"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "Ingredient",
+      "type": "object"
+    },
+    "Nutrition": {
+      "additionalProperties": false,
+      "properties": {
+        "basis": {
+          "default": "per_100g",
+          "enum": [
+            "per_100g",
+            "per_serving"
+          ],
+          "title": "Basis",
+          "type": "string"
+        },
+        "energy_kcal": {
+          "anyOf": [
+            {
+              "maximum": 950,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Energy Kcal"
+        },
+        "protein_g": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protein G"
+        },
+        "carbohydrate_g": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Carbohydrate G"
+        },
+        "total_sugars_g": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Total Sugars G"
+        },
+        "added_sugars_g": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Added Sugars G"
+        },
+        "total_fat_g": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Total Fat G"
+        },
+        "saturated_fat_g": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Saturated Fat G"
+        },
+        "trans_fat_g": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trans Fat G"
+        },
+        "fibre_g": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fibre G"
+        },
+        "sodium_mg": {
+          "anyOf": [
+            {
+              "maximum": 100000,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sodium Mg"
+        },
+        "cholesterol_mg": {
+          "anyOf": [
+            {
+              "maximum": 100000,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cholesterol Mg"
+        },
+        "serving_size_g": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "maximum": 1000,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Serving Size G"
+        },
+        "servings_per_pack": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "maximum": 1000,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Servings Per Pack"
+        },
+        "rda_percent_declared": {
+          "default": false,
+          "title": "Rda Percent Declared",
+          "type": "boolean"
+        }
+      },
+      "title": "Nutrition",
+      "type": "object"
+    },
+    "Package": {
+      "additionalProperties": false,
+      "properties": {
+        "net_quantity_g": {
+          "exclusiveMinimum": 0,
+          "maximum": 50000,
+          "title": "Net Quantity G",
+          "type": "number"
+        },
+        "surface_area_cm2": {
+          "exclusiveMinimum": 0,
+          "maximum": 100000,
+          "title": "Surface Area Cm2",
+          "type": "number"
+        },
+        "retail": {
+          "default": true,
+          "title": "Retail",
+          "type": "boolean"
+        },
+        "imported": {
+          "default": false,
+          "title": "Imported",
+          "type": "boolean"
+        },
+        "single_ingredient_unprocessed": {
+          "default": false,
+          "title": "Single Ingredient Unprocessed",
+          "type": "boolean"
+        },
+        "exemption_claimed": {
+          "default": false,
+          "title": "Exemption Claimed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "net_quantity_g",
+        "surface_area_cm2"
+      ],
+      "title": "Package",
+      "type": "object"
+    },
+    "RDABasis": {
+      "additionalProperties": false,
+      "properties": {
+        "protein_g_per_day": {
+          "exclusiveMinimum": 0,
+          "maximum": 200,
+          "title": "Protein G Per Day",
+          "type": "number"
+        },
+        "reference": {
+          "maxLength": 500,
+          "minLength": 10,
+          "title": "Reference",
+          "type": "string"
+        },
+        "target_population": {
+          "maxLength": 200,
+          "minLength": 3,
+          "title": "Target Population",
+          "type": "string"
+        },
+        "confirmed_by_reviewer": {
+          "default": false,
+          "title": "Confirmed By Reviewer",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "protein_g_per_day",
+        "reference",
+        "target_population"
+      ],
+      "title": "RDABasis",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "product_name": {
+      "maxLength": 200,
+      "minLength": 2,
+      "title": "Product Name",
+      "type": "string"
+    },
+    "category": {
+      "$ref": "#/$defs/Category"
+    },
+    "front_of_pack": {
+      "default": "",
+      "maxLength": 4000,
+      "title": "Front Of Pack",
+      "type": "string"
+    },
+    "other_label_text": {
+      "default": "",
+      "maxLength": 4000,
+      "title": "Other Label Text",
+      "type": "string"
+    },
+    "claims": {
+      "default": [],
+      "items": {
+        "maxLength": 250,
+        "type": "string"
+      },
+      "maxItems": 20,
+      "title": "Claims",
+      "type": "array"
+    },
+    "package": {
+      "$ref": "#/$defs/Package"
+    },
+    "declarations": {
+      "$ref": "#/$defs/Declarations"
+    },
+    "nutrition": {
+      "$ref": "#/$defs/Nutrition"
+    },
+    "rda_basis": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/RDABasis"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "assessment_date": {
+      "default": "2026-10-27",
+      "format": "date",
+      "title": "Assessment Date",
+      "type": "string"
+    }
+  },
+  "required": [
+    "product_name",
+    "category",
+    "package",
+    "declarations",
+    "nutrition"
+  ],
+  "title": "LabelRequest",
+  "type": "object"
+}
